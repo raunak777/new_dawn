@@ -18,7 +18,7 @@
         "9a370d0d-e49d-426e-b403-73ebaef59b4a": {
           "type": "shopify:\/\/apps\/first-app\/blocks\/star_rating\/6db44dcc-bc55-4b90-8ab3-4694ac2f1f93",
           "settings": {
-            "product": "{{product}}",
+            "product": "14k-bloom-earrings",
             "color": "#ff0000"
           }
         },
