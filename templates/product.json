@@ -15,9 +15,11 @@
           "settings": {
           }
         },
-        "98abe008-8462-434f-8d66-b6d42e0857ec": {
+        "9a370d0d-e49d-426e-b403-73ebaef59b4a": {
           "type": "shopify:\/\/apps\/first-app\/blocks\/star_rating\/6db44dcc-bc55-4b90-8ab3-4694ac2f1f93",
           "settings": {
+            "product": "{{product}}",
+            "color": "#ff0000"
           }
         },
         "subtitle": {
@@ -63,7 +65,7 @@
       "block_order": [
         "vendor",
         "title",
-        "98abe008-8462-434f-8d66-b6d42e0857ec",
+        "9a370d0d-e49d-426e-b403-73ebaef59b4a",
         "subtitle",
         "price",
         "variant_picker",
