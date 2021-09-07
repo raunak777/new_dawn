@@ -146,7 +146,7 @@
                 <button id="ProductPopup-{{ block.id }}" class="product-popup-modal__button link" type="button" aria-haspopup="dialog">{{ block.settings.link_label | default: block.settings.page.title }}</button>
               </modal-opener>
               <a href="{{ block.settings.page.url }}" class="product-popup-modal__button link no-js">{{ block.settings.link_label }}</a>
-        <img src="{{ block.settings.images | img_url: '' }}">
+       
           {%- when 'share' -%}
             <share-button class="share-button" {{ block.shopify_attributes }}>
               <button class="share-button__button button button--tertiary hidden">
@@ -727,12 +727,7 @@
           "id": "page",
           "type": "page",
           "label": "t:sections.main-product.blocks.popup.settings.page.label"
-        },
-		{
-		  "id": "img",
-		  "type": "image_picker",
-		  "label": "images"
-		}
+        }
       ]
     }
   ],
