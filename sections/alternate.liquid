@@ -1,7 +1,15 @@
+<h2>{{ section.settings.text }}</h2>
+
 {% schema %}
   {
     "name": "Section name",
-    "settings": []
+    "settings": [
+		{
+		  "type": "text",
+		  "id": "text",
+		  "label": "Text"
+		}
+	]
   }
 {% endschema %}
 
