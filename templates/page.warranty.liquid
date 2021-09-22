@@ -42,7 +42,8 @@
 <script>
 
   $(function(){
-    
+    let orderId = $("[order-details]").val();
+    console.log(orderId);
     $("[data-register]").on("click", function(){
       var postdata =  {
       "id": document.querySelector("[data-customerId]").value,
