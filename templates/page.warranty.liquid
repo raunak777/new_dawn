@@ -42,7 +42,7 @@
 <script>
 
   $(function(){
-    let orderId = $("[order-details]").val().trim();
+    let orderId = $("[order-details]").val().trim().split(",\n");
     console.log(orderId);
     $("[data-register]").on("click", function(){
       var postdata =  {
