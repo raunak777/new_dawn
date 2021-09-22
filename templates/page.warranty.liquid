@@ -47,17 +47,6 @@
   	arr.push("{{ order.order_number }}");
 	{% endfor %}
     $("[data-register]").on("click", function(){
-      let number = $("[data-ordernumber]").val();
-      let order = false;
-      
-      for(let i=0; i<arr.length;i++)
-      {
-      	if(number == arr[i])
-        {
-        	order = true;
-        }
-      }
-      
       var postdata =  {
       "id": $("[data-customerId]").val(),
       "first_name": $("[data-firstname]").val(),
@@ -71,6 +60,18 @@
       "postal": $("[data-postalcode]").val(),
       "order_number": $("[data-ordernumber]").val()
     }
+    
+      
+      let order = false;
+      
+      for(let i=0; i<arr.length;i++)
+      {
+      	if(postdata.order_number == arr[i])
+        {
+        	order = true;
+        }
+      }
+    
     $.ajax({
       type : "POST",
       url : "/apps/order",
