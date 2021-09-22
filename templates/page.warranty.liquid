@@ -1,0 +1,80 @@
+<div>
+    <div>
+      <input type="hidden" name="customerId" data-customerId {% if customer %} value="{{- customer.id -}}" {% endif %} />
+      <input type="text" name="firstname" data-firstname  placeholder="First Name*" {% if customer %} value="{{- customer.first_name -}}" {% endif %} />      
+      <input type="text" name="lastname" data-lastname placeholder="Last Name" {% if customer %} value="{{- customer.last_name -}}" {% endif %}/>
+    </div>
+    <div>
+      <input type="email" name="email" data-email placeholder="Email Address*" {% if customer %} value="{{- customer.email -}}" {% endif %} />
+    </div>
+    <div>
+      <input type="text" name="address" data-address placeholder="Address*" />
+    </div>
+    <div>
+      <input type="text" name="address2" data-address2 placeholder="Address Line 2" />
+    </div>
+    <div>
+      <input type="text" name="city" data-city placeholder="City*" />
+      <select data-country name="country" class="countries order-alpha" id="countryId">
+    	<option value="">Select Country*</option>
+	  </select>
+	  <select data-state name="state" class="states order-alpha" id="stateId">
+    	  <option value="">Select State*</option>
+	  </select>
+    </div>
+    <div>
+      <input type="number" name="postalcode" data-postalcode placeholder="Postal Code*" />
+      <input type="text" name="ordernumber" data-ordernumber placeholder="Order Number*" />
+    </div>
+    <div>
+      <input type="button" name="register" data-register value="Register Now" />
+    </div>
+  </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="//geodata.solutions/includes/countrystate.js"></script>
+
+<script>
+
+  $(function(){
+    
+    $("[data-register]").on("click", function(){
+      var postdata =  {
+      "id": document.querySelector("[data-customerId]").value,
+      "first_name": document.querySelector("[data-firstname]").value,
+      "last_name": document.querySelector("[data-lastname]").value,
+      "email": document.querySelector("[data-email]").value,
+      "address": document.querySelector("[data-address]").value,
+      "address2": document.querySelector("[data-address2]").value,
+      "city": document.querySelector("[data-city]").value,
+      "country": document.querySelector("[data-country]").value,
+      "state": document.querySelector("[data-state]").value,
+      "postal": document.querySelector("[data-postalcode]").value,
+      "order_number": document.querySelector("[data-ordernumber]").value
+    }
+    $.ajax({
+      type : "POST",
+      url : "https://6c62-2401-4900-4041-bf81-95a8-aade-fee-d8de.ngrok.io/custom/getdata.php",
+      dataType: "json",
+      data : postdata,
+      async:true,
+	  crossDomain:true,
+      header: {
+      "Access-Control-Allow-Origin": "https://ghostek.com/",
+      "Access-Control-Allow-Credentials":true,
+      "Access-Control-Allow-Headers":"Origin, Accept, Authorization, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers",
+      "Access-Control-Allow-Methods":"GET, POST, DELETE, PUT, HEAD, OPTIONS",
+      "Access-Control-Max-Age":1800,
+      "Cache-Control":"max-age=0"
+      
+      },
+      success : function(data){
+      console.log(data);
+      }
+    
+    });
+  
+  });
+  });
+  
+</script>
