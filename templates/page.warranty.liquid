@@ -56,17 +56,17 @@
       }
       
       var postdata =  {
-      "id": document.querySelector("[data-customerId]").value,
-      "first_name": document.querySelector("[data-firstname]").value,
-      "last_name": document.querySelector("[data-lastname]").value,
-      "email": document.querySelector("[data-email]").value,
-      "address": document.querySelector("[data-address]").value,
-      "address2": document.querySelector("[data-address2]").value,
-      "city": document.querySelector("[data-city]").value,
-      "country": document.querySelector("[data-country]").value,
-      "state": document.querySelector("[data-state]").value,
-      "postal": document.querySelector("[data-postalcode]").value,
-      "order_number": document.querySelector("[data-ordernumber]").value
+      "id": $("[data-customerId]").val(),
+      "first_name": $("[data-firstname]").val(),
+      "last_name": $("[data-lastname]").val(),
+      "email": $("[data-email]").val(),
+      "address": $("[data-address]").val(),
+      "address2": $("[data-address2]").val(),
+      "city": $("[data-city]").val(),
+      "country": $("[data-country]").val(),
+      "state": $("[data-state]").val(),
+      "postal": $("[data-postalcode]").val(),
+      "order_number": $("[data-ordernumber]").val()
     }
     $.ajax({
       type : "POST",
