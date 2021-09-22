@@ -30,8 +30,9 @@
       <input type="button" name="register" data-register value="Register Now" />
     </div>
   </div>
+
 {% for order in customer.orders %}
-  {{ order.order_number }}
+  {{ order.order_number }},
 {% endfor %}
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
