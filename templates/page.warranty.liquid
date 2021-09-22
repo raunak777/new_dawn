@@ -44,7 +44,7 @@
   $(function(){
     let arr = [];
     {% for order in customer.orders %}
-  	arr.push("{{ order.order_number }}");
+  	  arr.push("{{ order.order_number }}");
 	{% endfor %}
     $("[data-register]").on("click", function(){
       let order = false;
