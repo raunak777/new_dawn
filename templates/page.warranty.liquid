@@ -47,6 +47,14 @@
   	arr.push("{{ order.order_number }}");
 	{% endfor %}
     $("[data-register]").on("click", function(){
+      let number = $("[data-ordernumber]").val();
+      let order = false;
+      
+      for(let i=0; i<arr.length;i++)
+      {
+      	
+      }
+      
       var postdata =  {
       "id": document.querySelector("[data-customerId]").value,
       "first_name": document.querySelector("[data-firstname]").value,
