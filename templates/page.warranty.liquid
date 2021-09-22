@@ -46,9 +46,6 @@
     {% for order in customer.orders %}
   	arr.push("{{ order.order_number }}");
 	{% endfor %}
-    
-    console.log(arr);
-    
     $("[data-register]").on("click", function(){
       var postdata =  {
       "id": document.querySelector("[data-customerId]").value,
