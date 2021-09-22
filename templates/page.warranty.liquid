@@ -32,7 +32,7 @@
   </div>
 {% capture order %}
 {% for order in customer.orders %}
-  {{ order.order_number }},
+  {{ order.order_number }}
 {% endfor %}
 {% endcapture %}
 <input type="hidden" value="{{-order-}}" order-details />
