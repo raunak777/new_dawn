@@ -59,7 +59,7 @@
     				{% for attribute in order.attributes limit: 1 %}
                     	<p>Registered</p>
                      {% else %}
-                    <a href="/pages/warranty"><p>Not Registered</p></a>
+                    <a href="/pages/warranty?order_id={{ order.name }}"><p>Not Registered</p></a>
    					 {% endfor %}
 					{% endif %}
 
