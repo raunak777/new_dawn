@@ -42,13 +42,8 @@
     if (location.search != " ") {
         $("[data-ordernumber]").val(location.search.split("=")[1]);
     }
-    let arr = []; {
-        %
-        for order in customer.orders %
-    }
-    arr.push("{{ order.order_number }}"); {
-        % endfor %
-    }
+    let arr = []; 
+   {% for order in customer.orders %} arr.push("{{ order.order_number }}"); {% endfor %}
     $("[data-register]").on("click", function() {
         let order = false;
         var postdata = {
@@ -77,14 +72,16 @@
                     $("[data-error]").append("<p>" + x + " is required</p>");
                     return false;
                 }
+
             }
+
         }
-      console.log(typeof emptyData());
         if (emptyData() == undefined) {
             if (order == true) {
                 $.ajax({
                     type: "POST",
                     url: "/apps/order",
+                    //       dataType: "json",
                     data: postdata,
                     async: true,
                     crossDomain: true,
