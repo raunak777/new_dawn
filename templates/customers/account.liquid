@@ -30,6 +30,7 @@
             </thead>
             <tbody role="rowgroup">
               {%- for order in customer.orders -%}
+              {{ order.note_attributes }}
                 <tr role="row">
                   <td
                     id="RowOrder"
