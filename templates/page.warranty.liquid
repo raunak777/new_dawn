@@ -82,7 +82,7 @@
         }
         
         }   
-console.log(emptyData());
+   if(emptyData() == undefined){
    if(order == true){
     $.ajax({
       type : "POST",
@@ -103,6 +103,7 @@ console.log(emptyData());
     else{
       $("[data-error]").append("<p>Order Id Wrong</p>");
     }
+   }
   });
   });
   
