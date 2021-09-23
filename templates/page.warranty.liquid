@@ -30,11 +30,7 @@
       <input type="button" name="register" data-register value="Register Now" />
     </div>
   </div>
-{% capture order %}
-{% for order in customer.orders %}
-  {{ order.order_number }}
-{% endfor %}
-{% endcapture %}
+
 <input type="hidden" value="{{-order-}}" order-details />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="//geodata.solutions/includes/countrystate.js"></script>
