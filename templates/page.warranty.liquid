@@ -69,7 +69,7 @@
             for (x in postdata) {
                 if (postdata[x] == "") {
                     $("[data-error]").children("p").fadeOut(3000);
-                    $("[data-error]").append("<p>" + x.split("_") + " is required</p>");
+                    $("[data-error]").append("<p>" + x.split("_")[0]+ " "+ x.split("_")[1] + " is required</p>");
                     return false;
                 }
             }
