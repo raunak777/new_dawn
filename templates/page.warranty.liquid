@@ -45,12 +45,7 @@
     if(location.search != " ")
       {
         $("[data-ordernumber]").val(location.search.split("=")[1]);
-      }
-    else{
-    	console.log("Blank");
-    
-    }
-      
+      }  
     let arr = [];
     {% for order in customer.orders %}
   	  arr.push("{{ order.order_number }}");
