@@ -44,7 +44,7 @@
   $(function(){
     if(location.search != " ")
       {
-        $("[data-ordernumber]").val(location.search.split("="));
+        $("[data-ordernumber]").val(location.search.split("=")[1]);
       }
     else{
     	console.log("Blank");
