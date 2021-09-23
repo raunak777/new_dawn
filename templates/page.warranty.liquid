@@ -38,73 +38,70 @@
 
 <script>
 
-  $(function(){
-    if(location.search != " ")
-      {
+ $(function() {
+    if (location.search != " ") {
         $("[data-ordernumber]").val(location.search.split("=")[1]);
-      }  
-    let arr = [];
-    {% for order in customer.orders %}
-  	  arr.push("{{ order.order_number }}");
-	{% endfor %}
-    $("[data-register]").on("click", function(){
-      let order = false;
-      var postdata =  {
-      "id": $("[data-customerId]").val().trim(),
-      "first_name": $("[data-firstname]").val().trim(),
-      "last_name": $("[data-lastname]").val().trim(),
-      "email": $("[data-email]").val().trim(),
-      "address": $("[data-address]").val().trim(),
-      "address2": $("[data-address2]").val().trim(),
-      "city": $("[data-city]").val().trim(),
-      "country": $("[data-country]").val().trim(),
-      "state": $("[data-state]").val().trim(),
-      "postal": $("[data-postalcode]").val().trim(),
-      "order_number": $("[data-ordernumber]").val().trim()
     }
-      for(let i=0; i<arr.length;i++)
-      {
-      	if(postdata.order_number == arr[i])
-        {
-        	order = true;
+    let arr = []; {
+        %
+        for order in customer.orders %
+    }
+    arr.push("{{ order.order_number }}"); {
+        % endfor %
+    }
+    $("[data-register]").on("click", function() {
+        let order = false;
+        var postdata = {
+            "id": $("[data-customerId]").val().trim(),
+            "first_name": $("[data-firstname]").val().trim(),
+            "last_name": $("[data-lastname]").val().trim(),
+            "email": $("[data-email]").val().trim(),
+            "address": $("[data-address]").val().trim(),
+            "address2": $("[data-address2]").val().trim(),
+            "city": $("[data-city]").val().trim(),
+            "country": $("[data-country]").val().trim(),
+            "state": $("[data-state]").val().trim(),
+            "postal": $("[data-postalcode]").val().trim(),
+            "order_number": $("[data-ordernumber]").val().trim()
         }
-      }
-        function emptyData(){
-        for(x in postdata)
-        {
-          if(postdata[x] == "")
-          {
-            $("[data-error]").children("p").fadeOut(3000);
-            $("[data-error]").append("<p>" + x + " is required</p>");
-            return false;
-          }
-          
+        for (let i = 0; i < arr.length; i++) {
+            if (postdata.order_number == arr[i]) {
+                order = true;
+            }
         }
-        
-        }   
-   if(emptyData() == undefined){
-   if(order == true){
-    $.ajax({
-      type : "POST",
-      url : "/apps/order",
-//       dataType: "json",
-      data : postdata,
-      async:true,
-	  crossDomain:true,
-      success : function(data){      
-     	console.log(data);
-      },
-      error : function(err)
-      {
-      console.log(err);
-      }
+
+        function emptyData() {
+            for (x in postdata) {
+                if (postdata[x] == "") {
+                    $("[data-error]").children("p").fadeOut(3000);
+                    $("[data-error]").append("<p>" + x + " is required</p>");
+                    return false;
+                }
+
+            }
+
+        }
+        if (emptyData() == undefined) {
+            if (order == true) {
+                $.ajax({
+                    type: "POST",
+                    url: "/apps/order",
+                    //       dataType: "json",
+                    data: postdata,
+                    async: true,
+                    crossDomain: true,
+                    success: function(data) {
+                        console.log(data);
+                    },
+                    error: function(err) {
+                        console.log(err);
+                    }
+                });
+            } else {
+                $("[data-error]").append("<p>Order Id Wrong</p>");
+            }
+        }
     });
-    }
-    else{
-      $("[data-error]").append("<p>Order Id Wrong</p>");
-    }
-   }
-  });
-  });
+});
   
 </script>
