@@ -31,12 +31,7 @@
             <tbody role="rowgroup">
               {%- for order in customer.orders -%}
               {% if order.attributes %}
-  <p>Order notes:</p>
-  <ul>
-    {% for attribute in order.attributes %}
-      <li><strong>{{ attribute | first }}</strong>: {{ attribute | last }}</li>
-    {% endfor %}
-  </ul>
+              yes
 {% endif %}
                 <tr role="row">
                   <td
