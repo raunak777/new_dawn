@@ -74,13 +74,13 @@
         {
           if(postdata[x] == "")
           {
-          	console.log(x+" is required");
             $("[data-error]").append("<p>" + x + " is required</p>");
+            return false;
           }
         }
         
         }   
-emptyData();
+console.log(emptyData());
    if(order == true){
     $.ajax({
       type : "POST",
