@@ -42,7 +42,11 @@
 <script>
 
   $(function(){
-    
+    if(location.search != blank)
+      {
+        $("[data-ordernumber]").val(location.search.split("="));
+      }
+      
     let arr = [];
     {% for order in customer.orders %}
   	  arr.push("{{ order.order_number }}");
@@ -63,10 +67,6 @@
       "order_number": $("[data-ordernumber]").val()
     }
       
-      if(location.search != blank)
-      {
-        postdata.order_number.value = location.search.split("=");
-      }
       
       for(let i=0; i<arr.length;i++)
       {
