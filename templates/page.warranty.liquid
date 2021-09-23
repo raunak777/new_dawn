@@ -1,5 +1,5 @@
 <div>
-  	<p data-error ></p>
+  	<div data-error ></div>
     <div>
       <input type="hidden" name="customerId" data-customerId {% if customer %} value="{{- customer.id -}}" {% endif %} />
       <input type="text" name="firstname" data-firstname  placeholder="First Name*" {% if customer %} value="{{- customer.first_name -}}" {% endif %} />      
@@ -75,7 +75,7 @@
           if(postdata[x] == "")
           {
           	console.log(x+" is required");
-            $("[data-error]").append(x+" is required");
+            $("[data-error]").append("<p>" + x + " is required</p>");
           }
         }
         
