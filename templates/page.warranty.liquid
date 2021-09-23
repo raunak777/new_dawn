@@ -3,7 +3,7 @@
     <div>
       <input type="hidden" name="customerId" data-customerId {% if customer %} value="{{- customer.id -}}" {% endif %} />
       <input type="text" name="firstname" data-firstname  placeholder="First Name*" {% if customer %} value="{{- customer.first_name -}}" {% endif %} />      
-      <input type="text" name="lastname" data-lastname placeholder="Last Name" {% if customer %} value="{{- customer.last_name -}}" {% endif %}/>
+      <input type="text" name="lastname" data-lastname placeholder="Last Name*" {% if customer %} value="{{- customer.last_name -}}" {% endif %}/>
     </div>
     <div>
       <input type="email" name="email" data-email placeholder="Email Address*" {% if customer %} value="{{- customer.email -}}" {% endif %} />
