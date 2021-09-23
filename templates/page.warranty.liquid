@@ -1,4 +1,5 @@
 <div>
+  	<p data-error ></p>
     <div>
       <input type="hidden" name="customerId" data-customerId {% if customer %} value="{{- customer.id -}}" {% endif %} />
       <input type="text" name="firstname" data-firstname  placeholder="First Name*" {% if customer %} value="{{- customer.first_name -}}" {% endif %} />      
