@@ -50,17 +50,17 @@
     $("[data-register]").on("click", function(){
       let order = false;
       var postdata =  {
-      "id": $("[data-customerId]").val(),
-      "first_name": $("[data-firstname]").val(),
-      "last_name": $("[data-lastname]").val(),
-      "email": $("[data-email]").val(),
-      "address": $("[data-address]").val(),
-      "address2": $("[data-address2]").val(),
-      "city": $("[data-city]").val(),
-      "country": $("[data-country]").val(),
-      "state": $("[data-state]").val(),
-      "postal": $("[data-postalcode]").val(),
-      "order_number": $("[data-ordernumber]").val()
+      "id": $("[data-customerId]").val().trim(),
+      "first_name": $("[data-firstname]").val().trim(),
+      "last_name": $("[data-lastname]").val().trim(),
+      "email": $("[data-email]").val().trim(),
+      "address": $("[data-address]").val().trim(),
+      "address2": $("[data-address2]").val().trim(),
+      "city": $("[data-city]").val().trim(),
+      "country": $("[data-country]").val().trim(),
+      "state": $("[data-state]").val().trim(),
+      "postal": $("[data-postalcode]").val().trim(),
+      "order_number": $("[data-ordernumber]").val().trim()
     }
       for(let i=0; i<arr.length;i++)
       {
@@ -72,7 +72,10 @@
         function emptyData(){
         for(x in postdata)
         {
-          console.log(postdata[x]);
+          if(postdata[x] == "")
+          {
+          
+          }
         }
         
         }   
