@@ -55,7 +55,15 @@
                   <td headers="RowOrder ColumnTotal" role="cell" data-label="{{ 'customer.orders.total' | t }}">
                     {{ order.total_price | money_with_currency }}</td>
                   <td headers="RowOrder ColumnTotal" role="cell" data-label="{{ 'customer.orders.total' | t }}">
-                    {{ order.total_price | money_with_currency }}</td>
+                    {% if order.attributes %}
+    				{% for attribute in order.attributes %}
+                    	<p>Registered</p>
+                     {% else %}
+                    <p>Not Registered</p>
+   					 {% endfor %}
+					{% endif %}
+
+                  </td>
                 </tr>
               {%- endfor -%}
             </tbody>
