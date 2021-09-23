@@ -70,10 +70,6 @@
                 if (postdata[x] == "") {
                     $("[data-error]").children("p").fadeOut(3000);
                     $("[data-error]").append("<p>" + x.split("_").join(" ") + " is required</p>");
-                  if(x == "first_name")
-                  {
-                  	console.log(postdata[x].length);
-                  }
                     return false;
                 }
             }
