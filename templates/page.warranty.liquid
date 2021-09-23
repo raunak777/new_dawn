@@ -74,6 +74,7 @@
         {
           if(postdata[x] == "")
           {
+            $("[data-error]").children("p").fadeOut(3000);
             $("[data-error]").append("<p>" + x + " is required</p>");
             return false;
           }
