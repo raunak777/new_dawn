@@ -72,10 +72,9 @@
                     $("[data-error]").append("<p>" + x + " is required</p>");
                     return false;
                 }
-
             }
-
         }
+     console.log(typeof emptyData());
         if (emptyData() == undefined) {
             if (order == true) {
                 $.ajax({
