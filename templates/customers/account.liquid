@@ -26,18 +26,12 @@
                 <th id="ColumnPayment" scope="col" role="columnheader">{{ 'customer.orders.payment_status' | t }}</th>
                 <th id="ColumnFulfillment" scope="col" role="columnheader">{{ 'customer.orders.fulfillment_status' | t }}</th>
                 <th id="ColumnTotal" scope="col" role="columnheader">{{ 'customer.orders.total' | t }}</th>
+                <th id="ColumnTotal" scope="col" role="columnheader">Warranty</th>
               </tr>
             </thead>
             <tbody role="rowgroup">
               {%- for order in customer.orders -%}
-              {% if order.attributes %}
-  <p>Order notes:</p>
-  <ul>
-    {% for attribute in order.attributes %}
-      <li><strong>{{ attribute | first }}</strong>: {{ attribute | last }}</li>
-    {% endfor %}
-  </ul>
-{% endif %}
+              
                 <tr role="row">
                   <td
                     id="RowOrder"
