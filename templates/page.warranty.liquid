@@ -69,7 +69,14 @@
         	order = true;
         }
       }
-   
+        function emptyData(){
+        for(x in postdata)
+        {
+          console.log(postdata[x]);
+        }
+        
+        }   
+
    if(order == true){
     $.ajax({
       type : "POST",
