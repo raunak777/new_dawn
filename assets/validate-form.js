@@ -10,9 +10,9 @@ error.style.display = "block";
 Object.assign(error, {
   innerText: "Hello",
   style : {
-    cssText: {
+    
       color : "Red"
-    }
+   
   }
   })
 }
