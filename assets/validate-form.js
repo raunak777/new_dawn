@@ -32,7 +32,18 @@ function validateEmail(email) {
   return re.test(email);
 }
 
-console.log(email);
+
+if(email != null){
+['keyup','blur','focus'].forEach( function(evt) {
+  email.forEach(function(em){
+  em.addEventListener(evt, function(){
+  nameValidate(this.value.trim());
+  }, false);
+  })
+});
+}
+
+
 if(name != null){
 ['keyup','blur','focus'].forEach( function(evt) {
   name.addEventListener(evt, function(){
