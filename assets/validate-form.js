@@ -58,7 +58,14 @@ console.log("true");
 }
 else
 { 
-console.log("false");
+Object.assign(error, {
+  innerText: `Password between 8 to 15 characters 
+which contain at least one lowercase letter, 
+one uppercase letter, 
+one numeric digit, 
+and one special character`,
+  style: "display: block; color: red"
+  });
 }
 } 
 
