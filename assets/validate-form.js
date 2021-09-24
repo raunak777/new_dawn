@@ -2,8 +2,9 @@ let name = document.querySelector("[data-firstname]");
 let lastname = document.querySelector("[data-lastname]");
 let error = document.querySelector("[data-form-error]");
 let email = document.querySelectorAll("input[type=email]");
-console.log(typeof error);
+if(error != null){
 error.style.display = "none";
+}
 //name validation
 function nameValidate(name){
 let pattern = /^[a-zA-Z\s]*$/;
