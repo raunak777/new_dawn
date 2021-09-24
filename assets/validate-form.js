@@ -6,7 +6,7 @@ var pattern = /^[a-zA-Z\s]*$/;
 console.log(pattern.test(name));
 if(name.length < 3)
 {
-
+error.text("Name must be greater than 3 word");
 }
 
 }
