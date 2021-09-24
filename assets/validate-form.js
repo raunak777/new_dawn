@@ -4,8 +4,7 @@ let error = document.querySelector("[data-form-error]");
 let email = document.querySelectorAll("input[type=email]");
 error.style.display = "none";
 function nameValidate(name){
-var pattern = /^[a-zA-Z\s]*$/;
-
+let pattern = /^[a-zA-Z\s]*$/;
 if(name.length < 3)
 {
 Object.assign(error, {
@@ -25,6 +24,7 @@ Object.assign(error, {
 }
 }
 
+console.log(email);
 
 ['keyup','blur','focus'].forEach( function(evt) {
   name.addEventListener(evt, function(){
