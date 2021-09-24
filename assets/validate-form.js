@@ -37,7 +37,7 @@ if(email != null){
 ['keyup','blur','focus'].forEach( function(evt) {
   email.forEach(function(em){
   em.addEventListener(evt, function(){
-  console.log(this.value);
+  validateEmail(this.value.trim());
   }, false);
   })
 });
