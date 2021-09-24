@@ -2,6 +2,7 @@ let name = document.querySelector("[data-firstname]");
 let lastname = document.querySelector("[data-lastname]");
 let error = document.querySelector("[data-form-error]");
 let email = document.querySelectorAll("input[type=email]");
+let pass = document.querySelector("[data-password]");
 if(error != null){
 error.style.display = "none";
 }
@@ -45,6 +46,29 @@ function validateEmail(email) {
   else{
   error.style.display = "none";
   }
+}
+
+//password
+function checkPassword(pass) 
+{ 
+var reg =  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+if(pass.match(reg)) 
+{ 
+console.log("true");
+}
+else
+{ 
+console.log("false");
+}
+} 
+
+if(pass != null)
+{
+  ['keyup','blur','focus'].forEach( function(evt) {
+  pass.addEventListener(evt, function(){
+  checkPassword(this.value.trim());
+  }, false);
+});
 }
 
 
