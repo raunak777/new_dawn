@@ -4,7 +4,7 @@ error.style.display = "none";
 function nameValidate(name){
 var pattern = /^[a-zA-Z\s]*$/;
 
-if(name.length < 3 && pattern.test(name))
+if(name.length < 3 && pattern.test(name) == true)
 {
 Object.assign(error, {
   innerText: "Name must be greater 3 char & don't use number or special key",
