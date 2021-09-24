@@ -3,13 +3,22 @@ let error = document.querySelector("[data-form-error]");
 error.style.display = "none";
 function nameValidate(name){
 var pattern = /^[a-zA-Z\s]*$/;
-console.log(pattern.test(name));
+
 if(name.length < 3)
 {
 Object.assign(error, {
   innerText: "Name must be greater 3 char",
   style: "display: block; color: red"
-  })
+  });
+}
+else{
+if(pattern.test(name))
+{
+	console.log("True");
+}
+else{
+console.log("False");
+}
 }
 
 }
