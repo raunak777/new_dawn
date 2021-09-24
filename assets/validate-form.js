@@ -36,6 +36,12 @@ function validateEmail(email) {
   style: "display: block; color: red"
   });
   }
+  else if(email.startsWith('test')) {
+  Object.assign(error, {
+  innerText: "Email conatins test word!",
+  style: "display: block; color: red"
+  });
+  }
   else{
   error.style.display = "none";
   }
