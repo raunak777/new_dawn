@@ -6,10 +6,9 @@ var pattern = /^[a-zA-Z\s]*$/;
 console.log(pattern.test(name));
 if(name.length < 3)
 {
-error.style.display = "block";
 Object.assign(error, {
   innerText: "Hello",
-  style: "color: red"
+  style: "display: block; color: red"
   })
 }
 
