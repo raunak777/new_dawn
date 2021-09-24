@@ -7,7 +7,7 @@ console.log(pattern.test(name));
 if(name.length < 3)
 {
 Object.assign(error, {
-  innerText: "Hello",
+  innerText: "Name must be greater 3 char",
   style: "display: block; color: red"
   })
 }
