@@ -36,6 +36,9 @@ function validateEmail(email) {
   style: "display: block; color: red"
   });
   }
+  else{
+  error.display = "none";
+  }
 }
 
 
