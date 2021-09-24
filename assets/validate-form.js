@@ -10,7 +10,7 @@ error.style.display = "block";
 Object.assign(error, {
   innerText: "Hello"
   
-  }
+  
   })
 }
 
