@@ -54,7 +54,7 @@ function checkPassword(pass)
 var reg =  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
 if(pass.match(reg)) 
 { 
-console.log("true");
+error.style.display = "none";
 }
 else
 { 
