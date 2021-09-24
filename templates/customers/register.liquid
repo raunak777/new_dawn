@@ -12,6 +12,7 @@
   <h1>
     {{ 'customer.register.title' | t }}
   </h1>
+  <div data-form-error ></div>
   {%- form 'create_customer', novalidate: 'novalidate' -%}
     {%- if form.errors -%}
       <h2 class="form__message" tabindex="-1" autofocus>
