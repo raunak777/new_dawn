@@ -11,7 +11,7 @@ Object.assign(error, {
   style: "display: block; color: red"
   });
 }
-else{
+
 if(pattern.test(name))
 {
 	error.style.display = "none";
@@ -22,7 +22,7 @@ Object.assign(error, {
   style: "display: block; color: red"
   });
 }
-}
+
 
 }
 
