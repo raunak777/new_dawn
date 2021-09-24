@@ -12,7 +12,7 @@ console.log("Must be greater 3 digit");
 }
 
 
-['keyup','blur'].forEach( function(evt) {
+['keyup','blur','focus'].forEach( function(evt) {
   name.addEventListener(evt, function(){
   nameValidate(this.value.trim());
   }, false);
