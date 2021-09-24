@@ -1,4 +1,5 @@
 let name = document.querySelector("[data-firstname]");
+let lastname = document.querySelector("[data-lastname]");
 let error = document.querySelector("[data-form-error]");
 error.style.display = "none";
 function nameValidate(name){
