@@ -7,6 +7,4 @@ console.log(name);
 }
 
 
-name.addEventListener("keyup", function(){
-nameValidate(this.value);
-})
+name.addEventListener("keyup", nameValidate.bind(this.value));
