@@ -2,6 +2,7 @@ let name = document.querySelector("[data-firstname]");
 let lastname = document.querySelector("[data-lastname]");
 let error = document.querySelector("[data-form-error]");
 let email = document.querySelectorAll("input[type=email]");
+console.log(error);
 error.style.display = "none";
 //name validation
 function nameValidate(name){
