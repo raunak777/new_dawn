@@ -30,7 +30,7 @@ function validateEmail(email) {
   return re.test(email);
 }
 
-
+console.log(email);
 ['keyup','blur','focus'].forEach( function(evt) {
   name.addEventListener(evt, function(){
   nameValidate(this.value.trim());
