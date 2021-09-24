@@ -3,6 +3,7 @@ let lastname = document.querySelector("[data-lastname]");
 let error = document.querySelector("[data-form-error]");
 let email = document.querySelectorAll("input[type=email]");
 error.style.display = "none";
+//name validation
 function nameValidate(name){
 let pattern = /^[a-zA-Z\s]*$/;
 if(name.length < 3)
@@ -23,8 +24,12 @@ Object.assign(error, {
   });
 }
 }
+// email validation
+function validateEmail(email) {
+  const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
 
-console.log(email);
 
 ['keyup','blur','focus'].forEach( function(evt) {
   name.addEventListener(evt, function(){
