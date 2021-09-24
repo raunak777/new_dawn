@@ -33,14 +33,17 @@ function validateEmail(email) {
 }
 
 console.log(email);
+if(name != null){
 ['keyup','blur','focus'].forEach( function(evt) {
   name.addEventListener(evt, function(){
   nameValidate(this.value.trim());
   }, false);
 });
-
+}
+if(name != null){
 ['keyup','blur','focus'].forEach( function(evt) {
   lastname.addEventListener(evt, function(){
   nameValidate(this.value.trim());
   }, false);
 });
+}
