@@ -28,9 +28,13 @@ Object.assign(error, {
 
 
 ['keyup','blur','focus'].forEach( function(evt) {
-  ['name','lastname'].forEach(function(ele){
-  ele.addEventListener(evt, function(){
+  name.addEventListener(evt, function(){
   nameValidate(this.value.trim());
   }, false);
-  });
+});
+
+['keyup','blur','focus'].forEach( function(evt) {
+  lastname.addEventListener(evt, function(){
+  nameValidate(this.value.trim());
+  }, false);
 });
