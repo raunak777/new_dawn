@@ -11,14 +11,13 @@ Object.assign(error, {
   style: "display: block; color: red"
   });
 }
-
 else if(pattern.test(name))
 {
 	error.style.display = "none";
 }
 else{
 Object.assign(error, {
-  innerText: "Name error!",
+  innerText: "Name contains any special characters or numbers!",
   style: "display: block; color: red"
   });
 }
