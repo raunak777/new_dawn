@@ -8,9 +8,8 @@ if(name.length < 3)
 {
 error.style.display = "block";
 Object.assign(error, {
-  innerText: "Hello"
-  
-  
+  innerText: "Hello",
+  cssText: "color: red"
   })
 }
 
