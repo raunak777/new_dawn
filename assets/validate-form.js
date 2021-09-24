@@ -12,7 +12,7 @@ Object.assign(error, {
   });
 }
 
-if(pattern.test(name))
+else if(pattern.test(name))
 {
 	error.style.display = "none";
 }
