@@ -7,11 +7,11 @@ console.log(pattern.test(name));
 if(name.length < 3)
 {
 error.style.display = "block";
-// error.innerText = "Name must be greater than 3 char";
-  Object.assign(error, {
-  
-    innerText: "Hello"
-  
+Object.assign(error, {
+  innerText: "Hello"
+  style.innerHTML: {
+  color : "Red"
+	}
   })
 }
 
