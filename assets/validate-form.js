@@ -14,10 +14,13 @@ Object.assign(error, {
 else{
 if(pattern.test(name))
 {
-	console.log("True");
+	error.style.display = "none";
 }
 else{
-console.log("False");
+Object.assign(error, {
+  innerText: "Name error!",
+  style: "display: block; color: red"
+  });
 }
 }
 
