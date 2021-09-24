@@ -52,7 +52,7 @@ if(email != null){
 ['keyup','blur','focus'].forEach( function(evt) {
   email.forEach(function(em){
   em.addEventListener(evt, function(){
-  validateEmail(this.value.trim());
+  validateEmail(this.value.toLowerCase().trim());
   }, false);
   })
 });
