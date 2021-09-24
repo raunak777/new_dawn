@@ -9,5 +9,5 @@ console.log(pattern.test(name));
 
 
 name.addEventListener("keyup", function(){
-nameValidate(this.value);
+nameValidate(this.value.trim());
 })
