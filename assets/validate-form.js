@@ -37,7 +37,7 @@ function validateEmail(email) {
   });
   }
   else{
-  error.display = "none";
+  error.style.display = "none";
   }
 }
 
