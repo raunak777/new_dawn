@@ -2,7 +2,8 @@ let name = document.querySelector("[data-firstname]");
 
 
 function nameValidate(name){
-console.log(name);
+var name_pat = /^[a-zA-Z\s]*$/;
+        console.log("check", name_pat.test(name));
 
 }
 
