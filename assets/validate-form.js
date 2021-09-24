@@ -29,7 +29,13 @@ Object.assign(error, {
 // email validation
 function validateEmail(email) {
   const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  console.log(re.test(email));
+  if(re.test(email) == false)
+  {
+  Object.assign(error, {
+  innerText: "Email not valid!",
+  style: "display: block; color: red"
+  });
+  }
 }
 
 
