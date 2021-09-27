@@ -28,10 +28,21 @@ Object.assign(error, {
   innerText: "Name must be greater 3 character",
   style: "display: block; color: red"
   });
+  disable = false;
+  buttonDisable(disable);
 }
 else if(pattern.test(name))
 {
 	error.style.display = "none";
+  	if(email.length == 0 || pass.length == 0)
+    {
+      disable = false;
+      buttonDisable(disable);
+    }
+  else{
+    disable = true;
+    buttonDisable(disable);
+  }
   	
 }
 else
@@ -40,6 +51,8 @@ Object.assign(error, {
   innerText: "Name contains any special characters or numbers!",
   style: "display: block; color: red"
   });
+  disable = false;
+  buttonDisable(disable);
  
 }
 }
