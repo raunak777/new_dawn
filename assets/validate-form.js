@@ -10,10 +10,12 @@ error.style.display = "none";
 }
 buttonDisable(disable);
 function buttonDisable(bool){
-  if(!bool){
+  if(!bool)
+  {
     button.setAttribute("disabled",true);;
   }
-  else{
+  else
+  {
     button.removeAttribute("disabled");
   }
 }
