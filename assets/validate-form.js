@@ -69,6 +69,8 @@ and one special character`,
 }
 } 
 
+console.log(button);
+
 if(pass != null)
 {
   ['keyup','blur','focus'].forEach( function(evt) {
