@@ -3,9 +3,17 @@ let error = document.querySelector("[data-form-error]");
 let email = document.querySelector("[data-email]");
 let pass = document.querySelector("[data-password]");
 let button = document.querySelector("[data-submit]");
+let disable = false;
+
 if(error != null){
 error.style.display = "none";
 }
+
+function buttonDisable(bool){
+button.style.display = "none";
+}
+
+
 //name validation
 function nameValidate(name){
 let pattern = /^[a-zA-Z\s]*$/;
