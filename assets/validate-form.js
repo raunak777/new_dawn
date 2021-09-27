@@ -26,11 +26,14 @@ Object.assign(error, {
   innerText: "Name must be greater 3 character",
   style: "display: block; color: red"
   });
-  
+ disable = false;
+  buttonDisable(disable);
 }
 else if(pattern.test(name))
 {
 	error.style.display = "none";
+  	 disable = true;
+  buttonDisable(disable);
 }
 else{
 Object.assign(error, {
