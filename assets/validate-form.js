@@ -65,15 +65,28 @@ function validateEmail(email) {
   innerText: "Email not valid!",
   style: "display: block; color: red"
   });
+    disable = false;
+      buttonDisable(disable);
   }
   else if(email.startsWith('test')) {
   Object.assign(error, {
   innerText: "Email conatins test word!",
   style: "display: block; color: red"
   });
+    disable = false;
+      buttonDisable(disable);
   }
   else{
   error.style.display = "none";
+    if(name.value.length == 0 || pass.value.length == 0)
+    {
+      disable = false;
+      buttonDisable(disable);
+    }
+  else{
+    disable = true;
+    buttonDisable(disable);
+  }
   }
 }
 
@@ -84,6 +97,15 @@ var reg =  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
 if(pass.match(reg)) 
 { 
 error.style.display = "none";
+if(email.value.length == 0 || name.value.length == 0)
+    {
+      disable = false;
+      buttonDisable(disable);
+    }
+  else{
+    disable = true;
+    buttonDisable(disable);
+  }
 }
 else
 { 
@@ -95,6 +117,8 @@ one numeric digit,
 and one special character`,
   style: "display: block; color: red"
   });
+  disable = false;
+  buttonDisable(disable);
 }
 } 
 
