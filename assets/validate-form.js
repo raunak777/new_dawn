@@ -28,7 +28,6 @@ Object.assign(error, {
   innerText: "Name must be greater 3 character",
   style: "display: block; color: red"
   });
- 
 }
 else if(pattern.test(name))
 {
