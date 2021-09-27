@@ -1,6 +1,6 @@
 let name = document.querySelector("[data-firstname]");
 let error = document.querySelector("[data-form-error]");
-let email = document.querySelectorAll("input[type=email]");
+let email = document.querySelector("[data-email]");
 let pass = document.querySelector("[data-password]");
 if(error != null){
 error.style.display = "none";
@@ -80,11 +80,10 @@ if(pass != null)
 
 if(email != null){
 ['keyup','blur','focus'].forEach( function(evt) {
-  email.forEach(function(em){
-  em.addEventListener(evt, function(){
+  email.addEventListener(evt, function(){
   validateEmail(this.value.toLowerCase().trim());
   }, false);
-  })
+  
 });
 }
 
