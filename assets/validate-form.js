@@ -8,10 +8,10 @@ let disable = false;
 if(error != null){
 error.style.display = "none";
 }
-buttonDisable(disable)
+buttonDisable(disable);
 function buttonDisable(bool){
   if(!bool){
-    button.style.display = "none";
+    button.setAttribute("disabled",true);;
   }
 }
 //name validation
