@@ -27,7 +27,6 @@ Object.assign(error, {
   style: "display: block; color: red"
   });
   
-  buttonDisable(bool);
 }
 else if(pattern.test(name))
 {
