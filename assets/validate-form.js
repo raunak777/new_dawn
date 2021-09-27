@@ -69,7 +69,6 @@ and one special character`,
 }
 } 
 
-console.log(button);
 
 if(pass != null)
 {
