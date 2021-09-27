@@ -22,10 +22,13 @@ function nameValidate(name){
 let pattern = /^[a-zA-Z\s]*$/;
 if(name.length < 3)
 {
+
 Object.assign(error, {
   innerText: "Name must be greater 3 character",
   style: "display: block; color: red"
   });
+  disable = false;
+  buttonDisable(disable);
 }
 else if(pattern.test(name))
 {
