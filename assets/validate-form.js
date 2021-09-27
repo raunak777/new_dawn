@@ -13,6 +13,9 @@ function buttonDisable(bool){
   if(!bool){
     button.setAttribute("disabled",true);;
   }
+  else{
+    button.removeAttribute("disabled");
+  }
 }
 //name validation
 function nameValidate(name){
