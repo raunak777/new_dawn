@@ -12,7 +12,7 @@ let pattern = /^[a-zA-Z\s]*$/;
 if(name.length < 3)
 {
 Object.assign(error, {
-  innerText: "Name must be greater 3 char",
+  innerText: "Name must be greater 3 character",
   style: "display: block; color: red"
   });
 }
