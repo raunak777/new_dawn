@@ -34,7 +34,15 @@ Object.assign(error, {
 else if(pattern.test(name))
 {
 	error.style.display = "none";
-  	console.log(email.length);
+  	if(email.value.length == 0 || pass.value.length == 0)
+    {
+      disable = false;
+      buttonDisable(disable);
+    }
+  else{
+    disable = true;
+    buttonDisable(disable);
+  }
   	
 }
 else
