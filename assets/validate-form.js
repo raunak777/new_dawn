@@ -1,5 +1,4 @@
 let name = document.querySelector("[data-firstname]");
-let lastname = document.querySelector("[data-lastname]");
 let error = document.querySelector("[data-form-error]");
 let email = document.querySelectorAll("input[type=email]");
 let pass = document.querySelector("[data-password]");
@@ -93,13 +92,6 @@ if(email != null){
 if(name != null){
 ['keyup','blur','focus'].forEach( function(evt) {
   name.addEventListener(evt, function(){
-  nameValidate(this.value.trim());
-  }, false);
-});
-}
-if(name != null){
-['keyup','blur','focus'].forEach( function(evt) {
-  lastname.addEventListener(evt, function(){
   nameValidate(this.value.trim());
   }, false);
 });
