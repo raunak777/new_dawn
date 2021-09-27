@@ -33,7 +33,8 @@ else if(pattern.test(name))
 {
 	error.style.display = "none";
 }
-else{
+else
+{
 Object.assign(error, {
   innerText: "Name contains any special characters or numbers!",
   style: "display: block; color: red"
