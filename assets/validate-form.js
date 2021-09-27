@@ -8,12 +8,12 @@ let disable = false;
 if(error != null){
 error.style.display = "none";
 }
-
+buttonDisable(disable)
 function buttonDisable(bool){
-button.style.display = "none";
+  if(!bool){
+    button.style.display = "none";
+  }
 }
-
-
 //name validation
 function nameValidate(name){
 let pattern = /^[a-zA-Z\s]*$/;
