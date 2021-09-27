@@ -34,7 +34,7 @@ else if(pattern.test(name))
 {
 	error.style.display = "none";
     disable = true;
-  buttonDisable(true);
+  buttonDisable(disable);
 }
 }
 else{
@@ -42,9 +42,7 @@ Object.assign(error, {
   innerText: "Name contains any special characters or numbers!",
   style: "display: block; color: red"
   });
-    disable = false;
-  buttonDisable(disable);
-}
+  
 }
 }
 // email validation
