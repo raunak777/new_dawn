@@ -2,7 +2,7 @@ let name = document.querySelector("[data-firstname]");
 let error = document.querySelector("[data-form-error]");
 let email = document.querySelector("[data-email]");
 let pass = document.querySelector("[data-password]");
-let button = document.querySelector("[data-submit]");
+let button = document.querySelector("[data-register]");
 let disable = false;
 
 if (error != null) {
