@@ -83,7 +83,15 @@
                     async: true,
                     crossDomain: true,
                     success: function(data) {
-                        console.log(JSON.parse(data));
+                       if(data == 1)
+                       {
+                         $("[data-error]").children("p").fadeOut(3000);
+                         $("[data-error]").append("<p>Already Registered</p>");
+                       }
+                      else{
+                        $("[data-error]").children("p").fadeOut(3000);
+                         $("[data-error]").append("<p>Registration succesfull</p>");
+                      }
                     },
                     error: function(err) {
                         console.log(err);
