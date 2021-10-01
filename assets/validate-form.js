@@ -12,7 +12,7 @@ buttonDisable(disable);
 
 function buttonDisable(bool) {
     if (!bool) {
-        button.setAttribute("disabled", true);;
+        button.setAttribute("disabled", true);
     } else {
         button.removeAttribute("disabled");
     }
