@@ -1,8 +1,8 @@
 let name = document.querySelector("[data-firstname]");
-let error = document.querySelector("[data-error]");
+let error = document.querySelector("[data-form-error]");
 let email = document.querySelector("[data-email]");
 let pass = document.querySelector("[data-password]");
-let button = document.querySelector("[data-register]");
+let button = document.querySelector("[data-submit]");
 let disable = false;
 
 if (error != null) {
@@ -12,7 +12,7 @@ buttonDisable(disable);
 
 function buttonDisable(bool) {
     if (!bool) {
-        button.setAttribute("disabled", true);
+        button.setAttribute("disabled", true);;
     } else {
         button.removeAttribute("disabled");
     }
