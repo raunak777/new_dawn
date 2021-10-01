@@ -1,5 +1,5 @@
 let name = document.querySelector("[data-firstname]");
-let error = document.querySelector("[data-form-error]");
+let error = document.querySelector("[data-error]");
 let email = document.querySelector("[data-email]");
 let pass = document.querySelector("[data-password]");
 let button = document.querySelector("[data-register]");
