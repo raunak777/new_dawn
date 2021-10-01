@@ -83,7 +83,7 @@
                     async: true,
                     crossDomain: true,
                     success: function(data) {
-                        console.log(data);
+                        console.log(JSON.parse(data));
                     },
                     error: function(err) {
                         console.log(err);
