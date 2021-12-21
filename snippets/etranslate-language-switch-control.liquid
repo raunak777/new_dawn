@@ -280,77 +280,78 @@ function compareDate(d,b){var a=false;if(!d){return true}var c=d.split("-");if(c
 </script>
 <style>
   .etranslate-LanguageList {
-    position: absolute;
-  	z-index: 2147483647;
-  	cursor: pointer;
-    font-size:13px;
-    direction: ltr;
+      position: absolute;
+      z-index: 2147483647;
+      cursor: pointer;
+      font-size:13px;
+      direction: ltr;
   }
   .etranslate-language-float-link {
-    border: 1px solid rgb(224, 226, 228);
-    background-color: white;
+      border: 1px solid rgb(224, 226, 228);
+      background-color: white;
   }
 
   .rectangle_flag:before {
-    content: "\00a0";
+      content: "\00a0";
   }
 
-.select-dropdown-flag-icon-link {
-        font-size: 20px;
-        box-sizing: content-box;
-        background-size: contain;
-        background-position: 50%;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: 50%;
-        background-repeat: no-repeat;
-        position: relative;
-        display: inline-block;
-        width: 1.33333333em;
-        line-height: 1em;
-    }
+  .select-dropdown-flag-icon-link {
+      font-size: 20px;
+      box-sizing: content-box;
+      background-size: contain;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      position: relative;
+      display: inline-block;
+      width: 1.33333333em;
+      line-height: 1em;
+  }
 
-.select-dropdown-flag-icon-link:before {
-        content: "\00a0";
-    }
-#localiser-translate-etranslate>ul{
-  margin: 0px;
-  -webkit-transition: max-height 0.3s, visibility 0.2s, opacity 0.2s;
-  -moz-transition: max-height 0.3s, visibility 0.2s, opacity 0.2s;
-  -ms-transition: max-height 0.3s, visibility 0.2s, opacity 0.2s;
-  -o-transition: max-height 0.3s, visibility 0.2s, opacity 0.2s;
-  transition: all 0.2s;
-}
+  .select-dropdown-flag-icon-link:before {
+      content: "\00a0";
+  }
+  #localiser-translate-etranslate>ul{
+      margin: 0px;
+      -webkit-transition: max-height 0.3s, visibility 0.2s, opacity 0.2s;
+      -moz-transition: max-height 0.3s, visibility 0.2s, opacity 0.2s;
+      -ms-transition: max-height 0.3s, visibility 0.2s, opacity 0.2s;
+      -o-transition: max-height 0.3s, visibility 0.2s, opacity 0.2s;
+      transition: all 0.2s;
+  }
 
   .etranslate-flag-wrapper {
-    display: flex;
-  	align-items: center;
-  	width: 28px;
-  	height: 28px;
-  	font-size: 20px;
-  	margin-right: 3px;
+      display: flex;
+      align-items: center;
+      width: 28px;
+      height: 28px;
+      font-size: 20px;
+      margin-right: 3px;
   }
 
   .etranslate-language-list-button {
-    border: 1px solid rgba(224, 224, 224, 1);
-    padding: 8px 10px 8px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    -webkit-transition: max-height 0.2s, visibility 0.2s, opacity 0.2s;
-    -moz-transition: max-height 0.2s, visibility 0.2s, opacity 0.2s;
-    -ms-transition: max-height 0.2s, visibility 0.2s, opacity 0.2s;
-    -o-transition: max-height 0.2s, visibility 0.2s, opacity 0.2s;
-    transition: all 0.2s;
+      border: 1px solid rgba(224, 224, 224, 1);
+      padding: 8px 10px 8px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      -webkit-transition: max-height 0.2s, visibility 0.2s, opacity 0.2s;
+      -moz-transition: max-height 0.2s, visibility 0.2s, opacity 0.2s;
+      -ms-transition: max-height 0.2s, visibility 0.2s, opacity 0.2s;
+      -o-transition: max-height 0.2s, visibility 0.2s, opacity 0.2s;
+      transition: all 0.2s;
   }
 
   .etranslate-language-list-button-centent {
 
-    display: flex;
-    align-items: center;
-    }
+      display: flex;
+      align-items: center;
+  }
 
   .etranslate-language-arrow {
+      display: block!important;
       width: 0.5em;
       height: 0.5em;
       border-right: 1.5px solid currentColor;
@@ -359,891 +360,788 @@ function compareDate(d,b){var a=false;if(!d){return true}var c=d.split("-");if(c
       transition: all 0.2s;
       position: relative;
       top: -1px;
-    }
+  }
 
   .etranslate-language-arrow-up {
       transform: rotate(-45deg) !important;
-    }
+  }
 
   .etranslate-language-arrow-down {
       transform: rotate(135deg) !important;
-    }
+  }
 
   .etranslate-language-list-button:hover{
-  	opacity: 0.8
+      opacity: 0.8
   }
 
   .etranslate-language-list-dropdown {
-  padding: 0px;
-  overflow: auto;
-  background: white;
-  width: 208px;
-  user-select: none;
-  position: absolute;
-  z-index: 516;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 0px;
-  -webkit-transition: max-height 0.3s, visibility 0.2s, opacity 0.2s;
-  -moz-transition: max-height 0.3s, visibility 0.2s, opacity 0.2s;
-  -ms-transition: max-height 0.3s, visibility 0.2s, opacity 0.2s;
-  -o-transition: max-height 0.3s, visibility 0.2s, opacity 0.2s;
-  -webkit-overflow-scrolling: touch;
-  overflow: -moz-scrollbars-none;
-  display: block;
-  border: 1px solid rgba(224, 224, 224, 1);
+      padding: 0px;
+      overflow: auto;
+      background: white;
+      width: 208px;
+      user-select: none;
+      position: absolute;
+      z-index: 516;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0px;
+      -webkit-transition: max-height 0.3s, visibility 0.2s, opacity 0.2s;
+      -moz-transition: max-height 0.3s, visibility 0.2s, opacity 0.2s;
+      -ms-transition: max-height 0.3s, visibility 0.2s, opacity 0.2s;
+      -o-transition: max-height 0.3s, visibility 0.2s, opacity 0.2s;
+      -webkit-overflow-scrolling: touch;
+      overflow: -moz-scrollbars-none;
+      display: block;
+      border: 1px solid rgba(224, 224, 224, 1);
   }
   .etranslate-language-list-dropdown::-webkit-scrollbar {
-  display: none;
-}
+      display: none;
+  }
 
   .etranslate-language-list-dropdown > li{
-    margin:0px !important;
-    padding: 8px 10px 8px 10px;
-    cursor: pointer;
+      margin:0px !important;
+      padding: 8px 10px 8px 10px;
+      cursor: pointer;
   }
 
   .etranslate-lo-select-dropdown-item {
-  display: flex;
-  align-items: center;
-  -webkit-transition: max-height 0.3s, visibility 0.2s, opacity 0.2s;
-  -moz-transition: max-height 0.3s, visibility 0.2s, opacity 0.2s;
-  -ms-transition: max-height 0.3s, visibility 0.2s, opacity 0.2s;
-  -o-transition: max-height 0.3s, visibility 0.2s, opacity 0.2s;
-  transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      -webkit-transition: max-height 0.3s, visibility 0.2s, opacity 0.2s;
+      -moz-transition: max-height 0.3s, visibility 0.2s, opacity 0.2s;
+      -ms-transition: max-height 0.3s, visibility 0.2s, opacity 0.2s;
+      -o-transition: max-height 0.3s, visibility 0.2s, opacity 0.2s;
+      transition: all 0.2s;
   }
 
   .etranslate-language-name {
-    padding-top: 1px;
+      padding-top: 1px;
   }
 
   .etranslate-lo-select-dropdown-item:hover {
-  /* color: rgba(27, 160, 227, 1); */
-  opacity: 0.8
-}
+      /* color: rgba(27, 160, 227, 1); */
+      opacity: 0.8
+  }
 
   .lo-select-up {
-  position: absolute;
-  bottom: 100%;
-}
+      position: absolute;
+      bottom: 100%;
+  }
 
-.lo-select-selection-item-top {
-  border-bottom: 0px;
-}
+  .lo-select-selection-item-top {
+      border-bottom: 0px;
+  }
 
-.lo-select-selection-item-bottom {
-  border-top: 0px;
-}
+  .lo-select-selection-item-bottom {
+      border-top: 0px;
+  }
 
   .rectangle_flag:before {
-    content: "\00a0";
-	}
+      content: "\00a0";
+  }
 
   .flag-icon {
-    background-size: contain;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    position: relative;
-    display: inline-block;
-    width: 1.33333333em;
-    line-height: 1em;
-    border-radius: 4px;
+      background-size: contain;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      position: relative;
+      display: inline-block;
+      width: 1.33333333em;
+      line-height: 1em;
+      border-radius: 4px;
   }
 
   .circle_flag {
-  	border-radius: 50%;
-  	box-sizing: content-box !important;
-    width: 1em;
+      border-radius: 50%;
+      box-sizing: content-box !important;
+      width: 1em;
   }
 </style>
 <div id='localiser-translate-etranslate' class='etranslate-LanguageList' style='display:none'>
-     <span class='language-button'>
-      <div class='etranslate-language-list-button' id='etranslate-language-button' >
-        <div class='etranslate-language-list-button-centent'>
-          <div class='etranslate-flag-wrapper'>
-            <span class="rectangle_flag select-dropdown-flag-icon flag-icon" />
-          </div>
-
-          <div class="etranslate-language-name" data-name="{{ request.locale.endonym_name | split: '-' | first | strip }}">
-			{{ request.locale.name | split: '-' | first | strip }}
-          </div>
-
+   <span class='language-button'>
+    <div class='etranslate-language-list-button' id='etranslate-language-button'>
+      <div class='etranslate-language-list-button-centent'>
+        <div class='etranslate-flag-wrapper'>
+          <span class="rectangle_flag select-dropdown-flag-icon flag-icon"/>
         </div>
-        <div class='etranslate-language-arrow'></div>
-      </div>
-    </span>
-    <ul id='etranslate-language-list-dropdown' class='etranslate-language-list-dropdown' style='max-height:0px;opacity:0;'>
-		{%- for locale in shop.published_locales -%}
-            <li class='etranslate-lo-select-dropdown-item' data-code="{{ locale.iso_code }}" data-name="{{ locale.endonym_name }}">
-                  <div class="etranslate-flag-wrapper">
-                    <span class="rectangle_flag select-dropdown-flag-icon flag-icon"/>
-                  </div>
 
-                  <div class="etranslate-language-name">
-					{{locale.name}}
-                  </div>
-            </li>
-    	{%- endfor %}
-    </ul>
-  </div>
+        <div class="etranslate-language-name" data-name="{{ request.locale.endonym_name | split: '-' | first | strip }}">
+    {{ request.locale.name | split: '-' | first | strip }}
+        </div>
+
+      </div>
+      <div class='etranslate-language-arrow'></div>
+    </div>
+  </span>
+  <ul id='etranslate-language-list-dropdown' class='etranslate-language-list-dropdown'
+      style='max-height:0px;opacity:0;'>
+      {%- for locale in shop.published_locales -%}
+          <li class='etranslate-lo-select-dropdown-item' data-code="{{ locale.iso_code }}" data-name="{{ locale.endonym_name }}">
+              <div class="etranslate-flag-wrapper">
+                  <span class="rectangle_flag select-dropdown-flag-icon flag-icon"/>
+              </div>
+
+              <div class="etranslate-language-name">
+                  {{ locale.name }}
+              </div>
+          </li>
+      {%- endfor %}
+  </ul>
+</div>
 <script>
-  var isOpen=false
-  var is_up=false
+  var isOpen = false
+  var is_up = false
 
   var item_height = 46
 
   var flag_min_width = {
-    	rectangle_flag: 60,
-    	square_flag: 60,
-    	circle_flag: 55,
-    	without_flag: 0,
-    	no_flag: 0
-	}
+      rectangle_flag: 60,
+      square_flag: 60,
+      circle_flag: 55,
+      no_flag: 0,
+      without_flag: 0
+  }
 
   var language_min_width = {
-    language_code: 25,
-    language_name: 60,
-    native_language_name: 60,
-    no_labels: 0
-	}
+      language_code: 25,
+      language_name: 60,
+      native_language_name: 60,
+      no_labels: 0
+  }
 
   var langCodeToLangArray = {
-    "af": "Afrikaans",
-    "ak": "Akan",
-    "sq": "Albanian",
-    "am": "Amharic",
-    "ar": "Arabic",
-    "hy": "Armenian",
-    "as": "Assamese",
-    "az": "Azerbaijani",
-    "bm": "Bambara",
-    "bn": "Bangla",
-    "eu": "Basque",
-    "be": "Belarusian",
-    "bs": "Bosnian",
-    "br": "Breton",
-    "bg": "Bulgarian",
-    "my": "Burmese",
-    "ca": "Catalan",
-    "ce": "Chechen",
-    "zh-CN": "Chinese",
-    "zh-cn": "Chinese",
-    "zh-TW": "Chinese (TW)",
-    "zh-tw": "Chinese (TW)",
-    "cu": "Church Slavic",
-    "kw": "Cornish",
-    "hr": "Croatian",
-    "cs": "Czech",
-    "da": "Danish",
-    "nl": "Dutch",
-    "dz": "Dzongkha",
-    "en": "English",
-    "us": "English",
-    "eo": "Esperanto",
-    "et": "Estonian",
-    "ee": "Ewe",
-    "fo": "Faroese",
-    "fi": "Finnish",
-    "fr": "French",
-    "ff": "Fulah",
-    "gl": "Galician",
-    "lg": "Ganda",
-    "ka": "Georgian",
-    "de": "German",
-    "el": "Greek",
-    "gu": "Gujarati",
-    "ha": "Hausa",
-    "he": "Hebrew",
-    "hi": "Hindi",
-    "hu": "Hungarian",
-    "is": "Icelandic",
-    "ig": "Igbo",
-    "id": "Indonesian",
-    "ia": "Interlingua",
-    "ga": "Irish",
-    "it": "Italian",
-    "ja": "Japanese",
-    "jv": "Javanese",
-    "kl": "Kalaallisut",
-    "kn": "Kannada",
-    "ks": "Kashmiri",
-    "kk": "Kazakh",
-    "km": "Khmer",
-    "ki": "Kikuyu",
-    "rw": "Kinyarwanda",
-    "ko": "Korean",
-    "ku": "Kurdish",
-    "ky": "Kyrgyz",
-    "lo": "Lao",
-    "lv": "Latvian",
-    "ln": "Lingala",
-    "lt": "Lithuanian",
-    "lu": "Luba-Katanga",
-    "lb": "Luxembourgish",
-    "mk": "Macedonian",
-    "mg": "Malagasy",
-    "ms": "Malay",
-    "ml": "Malayalam",
-    "mt": "Maltese",
-    "gv": "Manx",
-    "mi": "Maori",
-    "mr": "Marathi",
-    "mn": "Mongolian",
-    "ne": "Nepali",
-    "nd": "North Ndebele",
-    "se": "Northern Sami",
-    "nb": "Norwegian (Bokmål)",
-    "nn": "Norwegian Nynorsk",
-    "or": "Odia",
-    "om": "Oromo",
-    "os": "Ossetic",
-    "ps": "Pashto",
-    "fa": "Persian",
-    "pl": "Polish",
-    "pt-BR": "Portuguese (Brazil)",
-    "pt-br": "Portuguese (Brazil)",
-    "pt-PT": "Portuguese (Portugal)",
-    "pt-pt": "Portuguese (Portugal)",
-    "pa": "Punjabi",
-    "qu": "Quechua",
-    "ro": "Romanian",
-    "rm": "Romansh",
-    "rn": "Rundi",
-    "ru": "Russian",
-    "sg": "Sango",
-    "gd": "Scottish Gaelic",
-    "sr": "Serbian",
-    "sn": "Shona",
-    "ii": "Sichuan Yi",
-    "sd": "Sindhi",
-    "si": "Sinhala",
-    "sk": "Slovak",
-    "sl": "Slovenian",
-    "so": "Somali",
-    "es": "Spanish",
-    "sw": "Swahili",
-    "sv": "Swedish",
-    "tg": "Tajik",
-    "ta": "Tamil",
-    "tt": "Tatar",
-    "te": "Telugu",
-    "th": "Thai",
-    "bo": "Tibetan",
-    "ti": "Tigrinya",
-    "to": "Tongan",
-    "tr": "Turkish",
-    "tk": "Turkmen",
-    "uk": "Ukrainian",
-    "ur": "Urdu",
-    "ug": "Uyghur",
-    "uz": "Uzbek",
-    "vi": "Vietnamese",
-    "vo": "Volapük",
-    "cy": "Welsh",
-    "fy": "Western Frisian",
-    "wo": "Wolof",
-    "xh": "Xhosa",
-    "yi": "Yiddish",
-    "yo": "Yoruba",
-    "zu": "Zulu",
-    "sa": "Arabic (Saudi Arabia)",
-    "ar-DZ": "Arabic (Algeria)",
-    "ar-dz": "Arabic (Algeria)",
-    "ar-EG": "Arabic (Egypt)",
-    "ar-eg": "Arabic (Egypt)",
-    "ar-IQ": "Arabic (Iraq)",
-    "ar-iq": "Arabic (Iraq)",
-    "ar-JO": "Arabic (Jordan)",
-    "ar-jo": "Arabic (Jordan)",
-    "ar-KW": "Arabic (Kuwait)",
-    "ar-kw": "Arabic (Kuwait)",
-    "ar-LB": "Arabic (Lebanon)",
-    "ar-lb": "Arabic (Lebanon)",
-    "ar-LY": "Arabic (Libya)",
-    "ar-ly": "Arabic (Libya)",
-    "ar-MA": "Arabic (Morocco)",
-    "ar-ma": "Arabic (Morocco)",
-    "ar-OM": "Arabic (Oman)",
-    "ar-om": "Arabic (Oman)",
-    "ar-QA": "Arabic (Qatar)",
-    "ar-qa": "Arabic (Qatar)",
-    "ar-SY": "Arabic (Syria)",
-    "ar-sy": "Arabic (Syria)",
-    "ar-TN": "Arabic (Tunisia)",
-    "ar-tn": "Arabic (Tunisia)",
-    "ar-YE": "Arabic (Yemen)",
-    "ar-ye": "Arabic (Yemen)",
-    "fr-CA": "French (Canada)",
-    "fr-ca": "French (Canada)",
-    "en-CA": "English (Canada)",
-    "en-ca": "English (Canada)",
-    "de-AT": "Austria",
-    "de-at": "Austria",
-    "de-CH": "Switzerland",
-    "de-ch": "Switzerland",
-    "de-LU": "Luxembourg",
-    "de-lu": "Luxembourg",
-    "es-MX": "Spanish (Mexico)",
-    "es-mx": "Spanish (Mexico)",
-    "es-CO": "Spanish (Columbia)",
-    "es-co": "Spanish (Columbia)",
-    "es-AR": "Spanish (Argentina)",
-    "es-ar": "Spanish (Argentina)",
-    "es-CL": "Chile",
-    "es-cl": "Chile",
-    "es-PE": "Peru",
-    "es-pe": "Peru",
-    "es-BO": "Bolivia",
-    "es-bo": "Bolivia",
-    "es-EC": "Ecuador",
-    "es-ec": "Ecuador",
-    "es-GT": "Guatemala",
-    "es-gt": "Guatemala",
-    "en-nz": "English (New Zealand)",
-    "en-NZ": "English (New Zealand)",
-};
+      "af": "Afrikaans",
+      "ak": "Akan",
+      "sq": "Albanian",
+      "am": "Amharic",
+      "ar": "Arabic",
+      "hy": "Armenian",
+      "as": "Assamese",
+      "az": "Azerbaijani",
+      "bm": "Bambara",
+      "bn": "Bangla",
+      "eu": "Basque",
+      "be": "Belarusian",
+      "bs": "Bosnian",
+      "br": "Breton",
+      "bg": "Bulgarian",
+      "my": "Burmese",
+      "ca": "Catalan",
+      "ce": "Chechen",
+      "zh-CN": "Chinese",
+      "zh-cn": "Chinese",
+      "zh-TW": "Chinese (TW)",
+      "zh-tw": "Chinese (TW)",
+      "cu": "Church Slavic",
+      "kw": "Cornish",
+      "hr": "Croatian",
+      "cs": "Czech",
+      "da": "Danish",
+      "nl": "Dutch",
+      "dz": "Dzongkha",
+      "en": "English",
+      "us": "English",
+      "eo": "Esperanto",
+      "et": "Estonian",
+      "ee": "Ewe",
+      "fo": "Faroese",
+      "fi": "Finnish",
+      "fr": "French",
+      "ff": "Fulah",
+      "gl": "Galician",
+      "lg": "Ganda",
+      "ka": "Georgian",
+      "de": "German",
+      "el": "Greek",
+      "gu": "Gujarati",
+      "ha": "Hausa",
+      "he": "Hebrew",
+      "hi": "Hindi",
+      "hu": "Hungarian",
+      "is": "Icelandic",
+      "ig": "Igbo",
+      "id": "Indonesian",
+      "ia": "Interlingua",
+      "ga": "Irish",
+      "it": "Italian",
+      "ja": "Japanese",
+      "jv": "Javanese",
+      "kl": "Kalaallisut",
+      "kn": "Kannada",
+      "ks": "Kashmiri",
+      "kk": "Kazakh",
+      "km": "Khmer",
+      "ki": "Kikuyu",
+      "rw": "Kinyarwanda",
+      "ko": "Korean",
+      "ku": "Kurdish",
+      "ky": "Kyrgyz",
+      "lo": "Lao",
+      "lv": "Latvian",
+      "ln": "Lingala",
+      "lt": "Lithuanian",
+      "lu": "Luba-Katanga",
+      "lb": "Luxembourgish",
+      "mk": "Macedonian",
+      "mg": "Malagasy",
+      "ms": "Malay",
+      "ml": "Malayalam",
+      "mt": "Maltese",
+      "gv": "Manx",
+      "mi": "Maori",
+      "mr": "Marathi",
+      "mn": "Mongolian",
+      "ne": "Nepali",
+      "nd": "North Ndebele",
+      "se": "Northern Sami",
+      "nb": "Norwegian (Bokmål)",
+      "nn": "Norwegian Nynorsk",
+      "or": "Odia",
+      "om": "Oromo",
+      "os": "Ossetic",
+      "ps": "Pashto",
+      "fa": "Persian",
+      "pl": "Polish",
+      "pt-BR": "Portuguese (Brazil)",
+      "pt-br": "Portuguese (Brazil)",
+      "pt-PT": "Portuguese (Portugal)",
+      "pt-pt": "Portuguese (Portugal)",
+      "pa": "Punjabi",
+      "qu": "Quechua",
+      "ro": "Romanian",
+      "rm": "Romansh",
+      "rn": "Rundi",
+      "ru": "Russian",
+      "sg": "Sango",
+      "gd": "Scottish Gaelic",
+      "sr": "Serbian",
+      "sn": "Shona",
+      "ii": "Sichuan Yi",
+      "sd": "Sindhi",
+      "si": "Sinhala",
+      "sk": "Slovak",
+      "sl": "Slovenian",
+      "so": "Somali",
+      "es": "Spanish",
+      "sw": "Swahili",
+      "sv": "Swedish",
+      "tg": "Tajik",
+      "ta": "Tamil",
+      "tt": "Tatar",
+      "te": "Telugu",
+      "th": "Thai",
+      "bo": "Tibetan",
+      "ti": "Tigrinya",
+      "to": "Tongan",
+      "tr": "Turkish",
+      "tk": "Turkmen",
+      "uk": "Ukrainian",
+      "ur": "Urdu",
+      "ug": "Uyghur",
+      "uz": "Uzbek",
+      "vi": "Vietnamese",
+      "vo": "Volapük",
+      "cy": "Welsh",
+      "fy": "Western Frisian",
+      "wo": "Wolof",
+      "xh": "Xhosa",
+      "yi": "Yiddish",
+      "yo": "Yoruba",
+      "zu": "Zulu",
+      "sa": "Arabic (Saudi Arabia)",
+      "ar-DZ": "Arabic (Algeria)",
+      "ar-EG": "Arabic (Egypt)",
+      "ar-IQ": "Arabic (Iraq)",
+      "ar-JO": "Arabic (Jordan)",
+      "ar-KW": "Arabic (Kuwait)",
+      "ar-LB": "Arabic (Lebanon)",
+      "ar-LY": "Arabic (Libya)",
+      "ar-MA": "Arabic (Morocco)",
+      "ar-OM": "Arabic (Oman)",
+      "ar-QA": "Arabic (Qatar)",
+      "ar-SY": "Arabic (Syria)",
+      "ar-TN": "Arabic (Tunisia)",
+      "ar-YE": "Arabic (Yemen)",
+  };
 
   var langCodeToCountryArray = {
-    "af": "ZA",
-    "sq": "AL",
-    "am": "ET",
-    "ar": "AE",
-    "hy": "AM",
-    "az": "AZ",
-    "eu": "ES",
-    "be": "BY",
-    "bn": "BD",
-    "bs": "BA",
-    "bg": "BG",
-    "ca": "CA",
-    "ceb": "PH",
-    "ny": "MW",
-    "zh-CN": "CN",
-    "zh-cn": "CN",
-    "zh-TW": "TW",
-    "zh-tw": "TW",
-    "zh-HK": "HK",
-    "zh-hk": "HK",
-    "co": "FR",
-    "hr": "HR",
-    "cs": "CZ",
-    "da": "DK",
-    "nl": "NL",
-    "en": "GB",
-    "et": "EE",
-    "tl": "PH",
-    "fi": "FI",
-    "fr": "FR",
-    "fy": "NL",
-    "gl": "ES",
-    "ka": "GE",
-    "de": "DE",
-    "el": "GR",
-    "gu": "IN",
-    "ht": "HT",
-    "ha": "NE",
-    "haw": "US",
-    "us": "US",
-    "iw": "IL",
-    "hi": "IN",
-    "hmn": "CN",
-    "hu": "HU",
-    "is": "IS",
-    "ig": "NG",
-    "id": "ID",
-    "ga": "IE",
-    "it": "IT",
-    "ja": "JP",
-    "jw": "ID",
-    "kn": "IN",
-    "kk": "KZ",
-    "km": "KH",
-    "ko": "KR",
-    "ku": "IR",
-    "ky": "KG",
-    "lo": "LA",
-    "la": "IT",
-    "lv": "LV",
-    "lt": "LT",
-    "lb": "LU",
-    "mk": "MK",
-    "mg": "MG",
-    "ms": "MY",
-    "ml": "IN",
-    "mt": "MT",
-    "mi": "NZ",
-    "nz": "NZ",
-    "mr": "IN",
-    "mn": "MN",
-    "my": "MM",
-    "ne": "NP",
-    "no": "NO",
-    "ps": "AF",
-    "fa": "IR",
-    "pl": "PL",
-    "pt": "PT",
-    "pa": "IN",
-    "ro": "RO",
-    "ru": "RU",
-    "sm": "US",
-    "gd": "CA",
-    "sr": "RS",
-    "st": "LS",
-    "sn": "ZW",
-    "sd": "PK",
-    "si": "LK",
-    "sk": "SK",
-    "sl": "SI",
-    "so": "SO",
-    "es": "ES",
-    "su": "SD",
-    "sw": "TZ",
-    "sv": "SE",
-    "tg": "TJ",
-    "ta": "IN",
-    "te": "IN",
-    "th": "TH",
-    "tr": "TR",
-    "uk": "UA",
-    "ur": "PK",
-    "uz": "UZ",
-    "vi": "VN",
-    "cy": "GB",
-    "xh": "ZA",
-    "yi": "DE",
-    "yo": "NG",
-    "zu": "ZA",
-    "ak": "GH",
-    "as": "IN",
-    "bm": "ML",
-    "br": "fr",
-    "ce": "ru",
-    "cu": "BG",
-    "kw": "KW",
-    "dz": "BT",
-    "eo": "un",
-    "ee": "GH",
-    "fo": "DK",
-    "ff": "MR",
-    "lg": "UG",
-    "he": "IL",
-    "ia": "un",
-    "jv": "ID",
-    "kl": "GL",
-    "ks": "IN",
-    "ki": "KE",
-    "rw": "RW",
-    "ln": "CG",
-    "lu": "CD",
-    "gv": "GB",
-    "nd": "ZW",
-    "se": "NO",
-    "nb": "NO",
-    "nn": "NO",
-    "or": "IN",
-    "om": "ET",
-    "os": "RU",
-    "pt-BR": "BR",
-    "pt-br": "BR",
-    "pt-PT": "PT",
-    "pt-pt": "PT",
-    "qu": "PE",
-    "rm": "CH",
-    "rn": "BI",
-    "sg": "CF",
-    "ii": "CN",
-    "tt": "RU",
-    "bo": "CN",
-    "ti": "ER",
-    "to": "TO",
-    "tk": "TM",
-    "ug": "ZH",
-    "vo": "un",
-    "wo": "SN",
-    "sa": "SA",
-    "ar-SA": "sa",
-    "ar-sa": "sa",
-    "ar-DZ": "DZ",
-    "ar-dz": "DZ",
-    "ar-AE": "AE",
-    "ar-ae": "AE",
-    "ar-BH": "BH",
-    "ar-bh": "BH",
-    "ar-EG": "EG",
-    "ar-eg": "EG",
-    "ar-IQ": "IQ",
-    "ar-iq": "IQ",
-    "ar-JO": "JO",
-    "ar-jo": "JO",
-    "ar-LB": "LB",
-    "ar-lb": "LB",
-    "ar-LY": "LY",
-    "ar-ly": "LY",
-    "ar-OM": "OM",
-    "ar-om": "OM",
-    "ar-QA": "QA",
-    "ar-qa": "QA",
-    "ar-SD": "SD",
-    "ar-sd": "SD",
-    "ar-SY": "SY",
-    "ar-sy": "SY",
-    "ar-YE": "YE",
-    "ar-ye": "YE",
-    "fr-BE": "BE",
-    "fr-be": "BE",
-    "fr-LU": "LU",
-    "fr-lu": "LU",
-    "fr-MC": "MC",
-    "fr-mc": "MC",
-    "fr-CH": "CH",
-    "fr-ch": "CH",
-    "fr-CA": "FR-CA",
-    "fr-ca": "FR-CA",
-    "en-CA": "FR-CA",
-    "en-ca": "FR-CA",
-    "de-AT": "AT",
-    "de-at": "AT",
-    "de-CH": "CH",
-    "de-ch": "CH",
-    "de-LU": "LU",
-    "de-lu": "LU",
-    "es-MX": "MX",
-    "es-mx": "MX",
-    "es-CO": "CO",
-    "es-co": "CO",
-    "es-AR": "AR",
-    "es-ar": "AR",
-    "es-CL": "CL",
-    "es-cl": "CL",
-    "es-PE": "PE",
-    "es-pe": "PE",
-    "es-BO": "BO",
-    "es-bo": "BO",
-    "es-EC": "EC",
-    "es-ec": "EC",
-    "es-GT": "GT",
-    "es-gt": "GT",
-    "en-nz": "NZ",
-    "en-NZ": "NZ",
-}
+      "af": "ZA",
+      "sq": "AL",
+      "am": "ET",
+      "ar": "AE",
+      "hy": "AM",
+      "az": "AZ",
+      "eu": "ES",
+      "be": "BY",
+      "bn": "BD",
+      "bs": "BA",
+      "bg": "BG",
+      "ca": "CA",
+      "ceb": "PH",
+      "ny": "MW",
+      "zh-CN": "CN",
+      "zh-TW": "TW",
+      "zh-HK": "HK",
+      "co": "FR",
+      "hr": "HR",
+      "cs": "CZ",
+      "da": "DK",
+      "nl": "NL",
+      "en": "GB",
+      "et": "EE",
+      "tl": "PH",
+      "fi": "FI",
+      "fr": "FR",
+      "fy": "NL",
+      "gl": "ES",
+      "ka": "GE",
+      "de": "DE",
+      "el": "GR",
+      "gu": "IN",
+      "ht": "HT",
+      "ha": "NE",
+      "haw": "US",
+      "us": "US",
+      "iw": "IL",
+      "hi": "IN",
+      "hmn": "CN",
+      "hu": "HU",
+      "is": "IS",
+      "ig": "NG",
+      "id": "ID",
+      "ga": "IE",
+      "it": "IT",
+      "ja": "JP",
+      "jw": "ID",
+      "kn": "IN",
+      "kk": "KZ",
+      "km": "KH",
+      "ko": "KR",
+      "ku": "IR",
+      "ky": "KG",
+      "lo": "LA",
+      "la": "IT",
+      "lv": "LV",
+      "lt": "LT",
+      "lb": "LU",
+      "mk": "MK",
+      "mg": "MG",
+      "ms": "MY",
+      "ml": "IN",
+      "mt": "MT",
+      "mi": "NZ",
+      "nz": "NZ",
+      "mr": "IN",
+      "mn": "MN",
+      "my": "MM",
+      "ne": "NP",
+      "no": "NO",
+      "ps": "AF",
+      "fa": "IR",
+      "pl": "PL",
+      "pt": "PT",
+      "pa": "IN",
+      "ro": "RO",
+      "ru": "RU",
+      "sm": "US",
+      "gd": "CA",
+      "sr": "RS",
+      "st": "LS",
+      "sn": "ZW",
+      "sd": "PK",
+      "si": "LK",
+      "sk": "SK",
+      "sl": "SI",
+      "so": "SO",
+      "es": "ES",
+      "su": "SD",
+      "sw": "TZ",
+      "sv": "SE",
+      "tg": "TJ",
+      "ta": "IN",
+      "te": "IN",
+      "th": "TH",
+      "tr": "TR",
+      "uk": "UA",
+      "ur": "PK",
+      "uz": "UZ",
+      "vi": "VN",
+      "cy": "GB",
+      "xh": "ZA",
+      "yi": "DE",
+      "yo": "NG",
+      "zu": "ZA",
+      "ak": "GH",
+      "as": "IN",
+      "bm": "ML",
+      "br": "fr",
+      "ce": "ru",
+      "cu": "BG",
+      "kw": "KW",
+      "dz": "BT",
+      "eo": "un",
+      "ee": "GH",
+      "fo": "DK",
+      "ff": "MR",
+      "lg": "UG",
+      "he": "IL",
+      "ia": "un",
+      "jv": "ID",
+      "kl": "GL",
+      "ks": "IN",
+      "ki": "KE",
+      "rw": "RW",
+      "ln": "CG",
+      "lu": "CD",
+      "gv": "GB",
+      "nd": "ZW",
+      "se": "NO",
+      "nb": "NO",
+      "nn": "NO",
+      "or": "IN",
+      "om": "ET",
+      "os": "RU",
+      "pt-BR": "BR",
+      "pt-PT": "PT",
+      "qu": "PE",
+      "rm": "CH",
+      "rn": "BI",
+      "sg": "CF",
+      "ii": "CN",
+      "tt": "RU",
+      "bo": "CN",
+      "ti": "ER",
+      "to": "TO",
+      "tk": "TM",
+      "ug": "ZH",
+      "vo": "un",
+      "wo": "SN",
+      "sa": "SA",
+      "ar-DZ": "DZ",
+      "ar-AE": "AE",
+      "ar-BH": "BH",
+      "ar-EG": "EG",
+      "ar-IQ": "IQ",
+      "ar-JO": "JO",
+      "ar-LB": "LB",
+      "ar-LY": "LY",
+      "ar-OM": "OM",
+      "ar-QA": "QA",
+      "ar-SD": "SD",
+      "ar-SY": "SY",
+      "ar-YE": "YE",
+  }
 
   function getLanguageList() {
       return [
-        {%- for locale in shop.published_locales %}
-        {
-          name: '{{locale.name}}',
-          endonym_name: '{{locale.endonym_name}}',
-          iso_code: '{{locale.iso_code}}',
-          primary: {{locale.primary}},
-        }{% unless forloop.last %},{% endunless -%}
-        {%- endfor %}
+          {%- for locale in shop.published_locales %}
+          {
+              name: '{{ locale.name }}',
+              endonym_name: '{{ locale.endonym_name }}',
+              iso_code: '{{ locale.iso_code }}',
+              primary: {{ locale.primary }},
+          }{% unless forloop.last %},{% endunless -%}
+          {%- endfor %}
       ];
   }
 
-  function setSelectorWhite(f,g,b){var a=b.flags_type;var d=b.labels_type;var e=b.selector_width;var c=g&&g[0]?g.length:0;var h=flag_min_width[a]+language_min_width[d]+6+Number(e)+"px";return h};
+  function setSelectorWhite(f,d,e,c){var h;var a;var g;if(c){h=e.mobile_flags_type;a=e.mobile_labels_type;g=e.mobile_selector_width}else{h=e.flags_type;a=e.labels_type;g=e.selector_width}var i=d&&d[0]?d.length:0;var b=flag_min_width[h]+language_min_width[a]+6+Number(g)+"px";return b};
 
-  function setSelectorStyle(b,d,f,h){var n=h.position_lr;var l=h.position_tb;var i=l==="fixed_top"||l==="fixed_bottom"?"fixed":"absolute";var e=n==="right"?"right":"left";var m=l==="bottom"||l==="fixed_bottom"?"bottom":"top";var g=h.font_color;var j;if(h.background_color==undefined&&h.background_opacity==undefined){j="rgba(255,255,255,1)"}else{j=transformationRgb(h.background_color,h.background_opacity)}var a=h.horizontal;var c=h.vertical;var k="top: auto;bottom: auto;left: auto;right: auto;"+n+":auto;"+l+":auto;"+e+":"+a+"px;"+m+":"+c+"px;background-color:"+j+";color:"+g+";position:"+i+";";return k};
+  function setSelectorStyle(b,d,g,i,e){var o;var m;var h;var a;var c;if(e){o=i.mobile_position_lr;m=i.mobile_position_tb;h=i.mobile_font_color;a=i.mobile_horizontal;c=i.mobile_vertical}else{o=i.position_lr;m=i.position_tb;h=i.font_color;a=i.horizontal;c=i.vertical}var j=m==="fixed_top"||m==="fixed_bottom"?"fixed":"absolute";var f=o==="right"?"right":"left";var n=m==="bottom"||m==="fixed_bottom"?"bottom":"top";var k;if((i.background_color==undefined&&i.background_opacity==undefined)||(i.mobile_background_color==undefined&&i.mobile_background_opacity==undefined)){k="rgba(255,255,255,1)"}else{if(e){k=transformationRgb(i.mobile_background_color,i.mobile_background_opacity)}else{k=transformationRgb(i.background_color,i.background_opacity)}}var l="top: auto;bottom: auto;left: auto;right: auto;"+o+":auto;"+m+":auto;"+f+":"+a+"px;"+n+":"+c+"px;background-color:"+k+";color:"+h+";position:"+j+";";return l};
 
-  function findLanguageFlags(language_flags, currentLocale) {
-    var flags_svg
-    currentLocale=currentLocale?currentLocale.toLowerCase():currentLocale
-    if (language_flags && language_flags[currentLocale]) {
-      flags_svg = langCodeToCountryArray[language_flags[currentLocale]] ? langCodeToCountryArray[language_flags[currentLocale]] : langCodeToCountryArray[currentLocale]
-    } else {
-      flags_svg = langCodeToCountryArray[currentLocale] ? langCodeToCountryArray[currentLocale] : langCodeToCountryArray[currentLocale.split('-')[0]]
-    }
-    return flags_svg
-  }
+  function findLanguageFlags(c,b){var a;if(c&&c[b]){a=langCodeToCountryArray[c[b]]?langCodeToCountryArray[c[b]]:langCodeToCountryArray[b]}else{a=langCodeToCountryArray[b]?langCodeToCountryArray[b]:langCodeToCountryArray[b.split("-")[0]]}return a};
 
-  function createLanguageFloatSelector(shopDomain, languageList, defaultLocale, currentLocale, etranslateDom, metaFiles){
-     var flags_type=metaFiles.flags_type
-     var labels_type=metaFiles.labels_type
-     var size = flags_type !== 'rectangle_flag' ? '1x1' : '4x3'
-     var flags_type_display = flags_type === 'no_flag' || flags_type === 'without_flag' ? true : false
-     var no_labels =  labels_type === 'no_labels'? true: false
-     var flagUrl = "https://my.parcelpanel.com/assets/other/flags/" + size
-     var selector_width=metaFiles.selector_width
-     var vertical=metaFiles.vertical
-     var position_tb=metaFiles.position_tb
-     var bg_rgba
+  function createLanguageFloatSelector(shopDomain, languageList, defaultLocale, currentLocale, etranslateDom, metaFiles, is_mobile) {
+      var flags_type
+      var labels_type
+      var size
+      var flags_type_display
+      var no_labels
+      var labels_language_name
+      var selector_width
+      var vertical
+      var position_tb
+      var border_width
+      var bg_rgba
 
-     var buttonDom=etranslateDom.getElementsByClassName('etranslate-language-list-button')[0]
-     var dropdownDom=etranslateDom.getElementsByClassName('etranslate-language-list-dropdown')[0]
-	 var dropdown_css_code=setSelectorStyle(buttonDom,dropdownDom, languageList, metaFiles)
-     var language_flags=metaFiles.language_flags
-
-     var flags_svg=findLanguageFlags(language_flags,currentLocale)
-
-     var border_width=metaFiles.border_width
-     var is_up=setPisition(buttonDom,dropdownDom,languageList,vertical,position_tb)
-
-     etranslateDom.setAttribute('style',dropdown_css_code)
-     var button_select_dom_flag = buttonDom.getElementsByClassName('select-dropdown-flag-icon')[0]
-     button_select_dom_flag.style.backgroundImage='url('+flagUrl+'/'+flags_svg.toLowerCase()+'.svg)'
-	 flags_type === 'circle_flag'?button_select_dom_flag.classList.add('circle_flag'):''
-
-     bg_rgba=transformationRgb(metaFiles.background_color,metaFiles.background_opacity)
-     dropdownDom.setAttribute('style','width:'+selector_width+';background-color:'+bg_rgba+';max-height:0px;opacity:0;')
-     var min_width=setSelectorWhite(etranslateDom,languageList,metaFiles)
-
-     buttonDom.style.width=min_width
-     buttonDom.style.borderWidth=border_width+'px'
-
-     dropdownDom.style.width=min_width
-     dropdownDom.style.borderWidth=border_width+'px'
-
-     var select_children=dropdownDom.children
-     for (var i = 0; i < select_children.length; i++) {
-    	var select_dom = select_children[i];
-       	var select_dom_flag = select_dom.getElementsByClassName('select-dropdown-flag-icon')[0]
-    	var language_code = select_dom.dataset.code;
-    	var language_native_name = select_children[i].dataset.name;
-       	var flags_svg=findLanguageFlags(language_flags,language_code)
-
-       	select_dom_flag.style.backgroundImage='url('+flagUrl+'/'+flags_svg.toLowerCase()+'.svg)'
-        flags_type === 'circle_flag'?select_dom_flag.classList.add('circle_flag'):''
-    	select_dom.onclick = languageChange(languageList.find(function (x) { return x.iso_code.toLowerCase() === language_code.toLowerCase(); }),defaultLocale);
-        var select_labels=select_dom.getElementsByClassName('etranslate-language-name')[0]
-        if (labels_type === 'language_name'){
-        	select_labels.innerHTML = langCodeToLangArray[language_code]?langCodeToLangArray[language_code]:select_labels.textContent
-      	} else if(labels_type === 'native_language_name') {
-      	    language_native_name = language_native_name=='français'?'Français':language_native_name
-      	    select_labels.innerHTML = language_native_name?language_native_name:langCodeToLangArray[language_code]
-      	} else {
-        	select_labels.innerHTML = language_code?language_code.toLocaleUpperCase():language_code
-      	}
-    }
-    if(flags_type_display){
-      var display_flag=etranslateDom.getElementsByClassName('etranslate-flag-wrapper')
-      for(var i=0;i<display_flag.length;i++){
-        display_flag[i].style.display='none'
-      }
-    }
-    if(no_labels){
-      var display_flag=etranslateDom.getElementsByClassName('etranslate-language-name')
-      for(var i=0;i<display_flag.length;i++){
-        display_flag[i].style.display='none'
-      }
-    }else{
-      var buttom_labels=buttonDom.getElementsByClassName('etranslate-language-name')[0]
-      if(labels_type === 'language_name'){
-        buttom_labels.innerHTML = langCodeToLangArray[currentLocale]?langCodeToLangArray[currentLocale]:buttom_labels.textContent
-      } else if (labels_type === 'native_language_name'){
-        var language_native_name = buttom_labels.dataset.name;
-        language_native_name = language_native_name=='français'?'Français':language_native_name
-		buttom_labels.innerHTML = language_native_name?language_native_name:buttom_labels.textContent
+      if (is_mobile) {
+          flags_type = metaFiles.mobile_flags_type
+          labels_type = metaFiles.mobile_labels_type
+          selector_width = metaFiles.mobile_selector_width
+          vertical = metaFiles.mobile_vertical
+          position_tb = metaFiles.mobile_position_tb
+          border_width = metaFiles.mobile_border_width
+          bg_rgba = transformationRgb(metaFiles.mobile_background_color, metaFiles.mobile_background_opacity)
       } else {
-        buttom_labels.innerHTML = currentLocale?currentLocale.toLocaleUpperCase():currentLocale
+          flags_type = metaFiles.flags_type
+          labels_type = metaFiles.labels_type
+          selector_width = metaFiles.selector_width
+          vertical = metaFiles.vertical
+          position_tb = metaFiles.position_tb
+          border_width = metaFiles.border_width
+          bg_rgba = transformationRgb(metaFiles.background_color, metaFiles.background_opacity)
       }
-    }
+      size = flags_type !== 'rectangle_flag' ? '1x1' : '4x3'
+      var flagUrl = "https://my.parcelpanel.com/assets/other/flags/" + size
+      flags_type_display = flags_type === 'no_flag' || flags_type === 'without_flag' ? true : false
+      no_labels = labels_type === 'no_labels' ? true : false
 
-    if(flags_type === 'rectangle_flag'){
-        var display_flag=etranslateDom.getElementsByClassName('etranslate-flag-wrapper')
-        for(var i=0;i<display_flag.length;i++){
-            display_flag[i].style.marginRight='8px'
-        }
-    }
+      var buttonDom = etranslateDom.getElementsByClassName('etranslate-language-list-button')[0]
+      var dropdownDom = etranslateDom.getElementsByClassName('etranslate-language-list-dropdown')[0]
+      var dropdown_css_code = setSelectorStyle(buttonDom, dropdownDom, languageList, metaFiles, is_mobile)
+      var language_flags = metaFiles.language_flags
 
-    var isOpen = false;
-    buttonDom.addEventListener('click', function (e) {
-    	isOpen = !isOpen;
-    	if (isOpen) {
-    		openDropdown();
-    	} else {
-    		closeDropdown();
-    	}
-    });
-    function openDropdown() {
-    	dropdownDom.style.maxHeight=select_children.length*46+'px'
-    	dropdownDom.style.opacity='1'
-        var pointer=buttonDom.getElementsByClassName('etranslate-language-arrow')[0]
-        if(is_up){
-          dropdownDom.style.borderBottom='0px'
-          pointer.classList.add('etranslate-language-arrow-up')
-        }else{
-          dropdownDom.style.borderTop='0px'
-          pointer.classList.add('etranslate-language-arrow-down')
-        }
-    	isOpen = true;
-    }
+      var flags_svg = findLanguageFlags(language_flags, currentLocale)
 
-    function closeDropdown() {
-    	dropdownDom.style.maxHeight='0px'
-    	dropdownDom.style.opacity='0'
-        var pointer=buttonDom.getElementsByClassName('etranslate-language-arrow')[0]
-        pointer.classList.remove('etranslate-language-arrow-down')
-        pointer.classList.remove('etranslate-language-arrow-up')
-    	isOpen = false;
-    }
+      var is_up = setPisition(buttonDom, dropdownDom, languageList, vertical, position_tb)
+
+      etranslateDom.setAttribute('style', dropdown_css_code)
+      var button_select_dom_flag = buttonDom.getElementsByClassName('select-dropdown-flag-icon')[0]
+      button_select_dom_flag.style.backgroundImage = 'url(' + flagUrl + '/' + flags_svg.toLowerCase() + '.svg)'
+      flags_type === 'circle_flag' ? button_select_dom_flag.classList.add('circle_flag') : ''
+
+      dropdownDom.setAttribute('style', 'width:' + selector_width + ';background-color:' + bg_rgba + ';max-height:0px;opacity:0;')
+      var min_width = setSelectorWhite(etranslateDom, languageList, metaFiles, is_mobile)
+
+      buttonDom.style.width = min_width
+      buttonDom.style.borderWidth = border_width + 'px'
+
+      dropdownDom.style.width = min_width
+      dropdownDom.style.borderWidth = border_width + 'px'
+
+      var select_children = dropdownDom.children
+      for (var i = 0; i < select_children.length; i++) {
+          var select_dom = select_children[i];
+          var select_dom_flag = select_dom.getElementsByClassName('select-dropdown-flag-icon')[0]
+          var language_code = select_dom.dataset.code;
+          var language_native_name = select_children[i].dataset.name;
+          var flags_svg = findLanguageFlags(language_flags, language_code)
+
+          select_dom_flag.style.backgroundImage = 'url(' + flagUrl + '/' + flags_svg.toLowerCase() + '.svg)'
+          flags_type === 'circle_flag' ? select_dom_flag.classList.add('circle_flag') : ''
+          select_dom.onclick = languageChange(languageList.find(function (x) {
+              return x.iso_code.toLowerCase() === language_code.toLowerCase();
+          }), defaultLocale);
+          var select_labels = select_dom.getElementsByClassName('etranslate-language-name')[0]
+          if (labels_type === 'language_name') {
+              select_labels.innerHTML = langCodeToLangArray[language_code] ? langCodeToLangArray[language_code] : select_labels.textContent
+          } else if (labels_type === 'native_language_name') {
+              language_native_name = language_native_name == 'français' ? 'Français' : language_native_name
+              select_labels.innerHTML = language_native_name ? language_native_name : langCodeToLangArray[language_code]
+          } else {
+              select_labels.innerHTML = language_code ? language_code.toLocaleUpperCase() : language_code
+          }
+      }
+      if (flags_type_display) {
+          var display_flag = etranslateDom.getElementsByClassName('etranslate-flag-wrapper')
+          for (var i = 0; i < display_flag.length; i++) {
+              display_flag[i].style.display = 'none'
+          }
+      }
+      if (no_labels) {
+          var display_flag = etranslateDom.getElementsByClassName('etranslate-language-name')
+          for (var i = 0; i < display_flag.length; i++) {
+              display_flag[i].style.display = 'none'
+          }
+      } else {
+          var buttom_labels = buttonDom.getElementsByClassName('etranslate-language-name')[0]
+          if (labels_type === 'language_name') {
+              buttom_labels.innerHTML = langCodeToLangArray[currentLocale] ? langCodeToLangArray[currentLocale] : buttom_labels.textContent
+          } else if (labels_type === 'native_language_name') {
+              var language_native_name = buttom_labels.dataset.name;
+              language_native_name = language_native_name == 'français' ? 'Français' : language_native_name
+              buttom_labels.innerHTML = language_native_name ? language_native_name : buttom_labels.textContent
+          } else {
+              buttom_labels.innerHTML = currentLocale ? currentLocale.toLocaleUpperCase() : currentLocale
+          }
+      }
+
+      if (flags_type === 'rectangle_flag') {
+          var display_flag = etranslateDom.getElementsByClassName('etranslate-flag-wrapper')
+          for (var i = 0; i < display_flag.length; i++) {
+              display_flag[i].style.marginRight = '8px'
+          }
+      }
+
+      var isOpen = false;
+      buttonDom.addEventListener('click', function (e) {
+          isOpen = !isOpen;
+          if (isOpen) {
+              openDropdown();
+          } else {
+              closeDropdown();
+          }
+      });
+
+      function openDropdown() {
+          dropdownDom.style.maxHeight = select_children.length * 46 + 'px'
+          dropdownDom.style.opacity = '1'
+          var pointer = buttonDom.getElementsByClassName('etranslate-language-arrow')[0]
+          if (is_up) {
+              pointer.classList.add('etranslate-language-arrow-up')
+          } else {
+              pointer.classList.add('etranslate-language-arrow-down')
+          }
+          isOpen = true;
+      }
+
+      function closeDropdown() {
+          dropdownDom.style.maxHeight = '0px'
+          dropdownDom.style.opacity = '0'
+          var pointer = buttonDom.getElementsByClassName('etranslate-language-arrow')[0]
+          pointer.classList.remove('etranslate-language-arrow-down')
+          pointer.classList.remove('etranslate-language-arrow-up')
+          isOpen = false;
+      }
 
 
-
-    function languageChange(lang) {
-              return function () {
-              var protocol=window.location.protocol
-              var host=window.location.host
-              var search_info=window.location.search
+      function languageChange(lang) {
+          return function () {
+              var protocol = window.location.protocol
+              var host = window.location.host
+              var search_info = window.location.search
               var pathname = window.location.pathname
-              var lan_code=lang.iso_code.toLowerCase()
+              var lan_code = lang.iso_code.toLowerCase()
               var url_lan_code = (pathname.match(/\/(\S*?)\//) || pathname.match(/\/(\S*)/))[1]
               localStorage.setItem('lan_code', lan_code);
 
               //点击当前语言刷新
-              if(currentLocale===lan_code){
-                location.reload();
+              if (currentLocale === lan_code) {
+                  location.reload();
               }
 
               //切换为默认语言
-              if(currentLocale.toLowerCase()!==lan_code.toLowerCase() && url_lan_code.toLowerCase()!==lan_code.toLowerCase() && defaultLocale.toLowerCase()===lan_code.toLowerCase()){
-                var new_pathname
-                if (!url_lan_code) {
-                    new_pathname = '/' + lan_code
-                } else {
-                    new_pathname = pathname.replace('/' + url_lan_code, '')
-                }
-                window.location.href = `${window.location.protocol}//${window.location.host}${new_pathname}${window.location.search}`
+              if (currentLocale.toLowerCase() !== lan_code.toLowerCase() && url_lan_code.toLowerCase() !== lan_code.toLowerCase() && defaultLocale.toLowerCase() === lan_code.toLowerCase()) {
+                  var new_pathname
+                  if (!url_lan_code) {
+                      new_pathname = '/' + lan_code
+                  } else {
+                      new_pathname = pathname.replace('/' + url_lan_code, '')
+                  }
+                  window.location.href = `${window.location.protocol}//${window.location.host}${new_pathname}${window.location.search}`
               }
 
               //切换为非默认
-              if(currentLocale.toLowerCase()!==lan_code.toLowerCase() && url_lan_code.toLowerCase()!==lan_code.toLowerCase() && defaultLocale.toLowerCase()!==lan_code.toLowerCase()){
-                //插入url_lan_code
-            	var new_pathname
-                if (lan_code === url_lan_code.toLowerCase()) {
-                	new_pathname = pathname
-            	} else {
-                	if (!url_lan_code) {
-                    	new_pathname = '/' + lan_code
-                	} else {
-                  		var find_lan_code=false;
-                  		languageList.map((v,k)=>{
-                    		if(v.iso_code.toLowerCase()===url_lan_code.toLowerCase()){
-                      		find_lan_code=true
-                    	}
-                  		})
-                		if(find_lan_code){
-                   			new_pathname = pathname.replace(url_lan_code, lan_code)
-                		} else {
-                   	 		new_pathname = '/' + lan_code + pathname
-                		}
-                	}
-                }
-                window.location.href = `${window.location.protocol}//${window.location.host}${new_pathname}${window.location.search}`
+              if (currentLocale.toLowerCase() !== lan_code.toLowerCase() && url_lan_code.toLowerCase() !== lan_code.toLowerCase() && defaultLocale.toLowerCase() !== lan_code.toLowerCase()) {
+                  //插入url_lan_code
+                  var new_pathname
+                  if (lan_code === url_lan_code.toLowerCase()) {
+                      new_pathname = pathname
+                  } else {
+                      if (!url_lan_code) {
+                          new_pathname = '/' + lan_code
+                      } else {
+                          var find_lan_code = false;
+                          languageList.map((v, k) => {
+                              if (v.iso_code.toLowerCase() === url_lan_code.toLowerCase()) {
+                                  find_lan_code = true
+                              }
+                          })
+                          if (find_lan_code) {
+                              new_pathname = pathname.replace(url_lan_code, lan_code)
+                          } else {
+                              new_pathname = '/' + lan_code + pathname
+                          }
+                      }
+                  }
+                  window.location.href = `${window.location.protocol}//${window.location.host}${new_pathname}${window.location.search}`
               }
-            }
           }
-     return etranslateDom
+      }
+      return etranslateDom
   }
 
-	function setPisition(j,l,b,c,k){var h=j.getBoundingClientRect();var e=l.getBoundingClientRect();const f=b[0]?b.length*item_height:0;const a=c+h["height"];const i=c-e["height"];const g=c-e["height"];var d=k.substring(k.lastIndexOf("_")+1,k.length);if(g<f&&d!=="top"){l.classList.add("lo-select-up");return true}else{if(g>=f&&d!=="top"){l.classList.remove("lo-select-up");return false}}};
+  function setPisition(j,l,b,c,k){var h=j.getBoundingClientRect();var e=l.getBoundingClientRect();const f=b[0]?b.length*item_height:0;const a=c+h["height"];const i=c-e["height"];const g=c-e["height"];var d=k.substring(k.lastIndexOf("_")+1,k.length);if(g<f&&d!=="top"){l.classList.add("lo-select-up");return true}else{if(g>=f&&d!=="top"){l.classList.remove("lo-select-up");return false}}};
 
-	function getCurrentLocale(c,b){var a=window.location.pathname.split("/").filter(function(d){return d});if(a&&a.length>0&&c.find(function(d){return d.iso_code.toLowerCase()===a[0].toLowerCase()})){return a[0]}else{return b}};
+  function getCurrentLocale(c,b){var a=window.location.pathname.split("/").filter(function(d){return d});if(a&&a.length>0&&c.find(function(d){return d.iso_code.toLowerCase()===a[0].toLowerCase()})){return a[0]}else{return b}};
 
-	function setLanguageSelector(){
-  		var languageList = getLanguageList();
-    	var shopDomain = 'https://{{shop.domain}}';
-    	var primaryLanguage = languageList.find(function (x) { return x.primary; });
-    	var defaultLocale = primaryLanguage ? primaryLanguage.iso_code : 'en';
-    	var currentLocale = getCurrentLocale(languageList, defaultLocale);
-    	var metaFiles = {{shop.metafields.etranslate.selector_config | json}}
-    	var etranslateDom=document.getElementById('localiser-translate-etranslate')
-    	applyPriviewCssCode(metaFiles.css_code)
-    	if( Number(metaFiles.status) === 1){
-       		if(metaFiles.choose_language_selector === undefined || metaFiles.choose_language_selector === 'floating_selector'){
-          		if(metaFiles.style_of_the_selector === undefined || metaFiles.style_of_the_selector === 'dropdown'){
-      				createLanguageFloatSelector(shopDomain, languageList, defaultLocale, currentLocale, etranslateDom, metaFiles)
-            	}else{
-              		etranslateDom.remove()
-            	}
-        	}else{
-          		etranslateDom.remove()
-        	}
-    	}else{
-      		etranslateDom.remove()
-    	}
-      
-  	}
+  function setLanguageSelector() {
+      var languageList = getLanguageList();
+      var shopDomain = 'https://{{ shop.domain }}';
+      var primaryLanguage = languageList.find(function (x) {
+          return x.primary;
+      });
+      var defaultLocale = primaryLanguage ? primaryLanguage.iso_code : 'en';
+      var currentLocale = getCurrentLocale(languageList, defaultLocale);
+      var metaFiles = {{shop.metafields.etranslate.selector_config | json}}
+      var etranslateDom = document.getElementById('localiser-translate-etranslate')
+      var is_mobile = isMobile();
+      if (Number(metaFiles.status) === 1) {
+          if(is_mobile){
+              if(metaFiles.mobile_choose_language_selector === 'floating_selector' && (metaFiles.mobile_style_of_the_selector === undefined || metaFiles.mobile_style_of_the_selector === 'dropdown')){
+                  applyPriviewCssCode(metaFiles.mobile_css_code)
+                  createLanguageFloatSelector(shopDomain, languageList, defaultLocale, currentLocale, etranslateDom, metaFiles, is_mobile)
+              }else{
+                  etranslateDom.remove()
+              }
+          } else {
+              if (metaFiles.choose_language_selector === 'floating_selector' && (metaFiles.style_of_the_selector === undefined || metaFiles.style_of_the_selector === 'dropdown')) {
+                  applyPriviewCssCode(metaFiles.css_code)
+                  createLanguageFloatSelector(shopDomain, languageList, defaultLocale, currentLocale, etranslateDom, metaFiles, is_mobile)
+              } else {
+                  etranslateDom.remove()
+              }
+          }
+      } else {
+          etranslateDom.remove()
+      }
+  }
 
   function applyPriviewCssCode(css_code) {
-    var myReg = /^[.#]?\w+[^{]+\{[^}]*\}/;
-    if (css_code && myReg.test(css_code)) {
-       addCSS(css_code)
-    }
-  }
-
-  function addCSS(cssText){
-    var style = document.createElement('style'),  //创建一个style元素
-    head = document.head || document.getElementsByTagName('head')[0]; //获取head元素
-    style.type = 'text/css'; //这里必须显示设置style元素的type属性为text/css，否则在ie中不起作用
-    if(style.styleSheet){ //IE
-        var func = function(){
-            try{ //防止IE中stylesheet数量超过限制而发生错误
-                style.styleSheet.cssText = cssText;
-            }catch(e){
-
-            }
-        }
-        //如果当前styleSheet还不能用，则放到异步中则行
-        if(style.styleSheet.disabled){
-            setTimeout(func,10);
-        }else{
-            func();
-        }
-    }else{ //w3c
-        //w3c浏览器中只要创建文本节点插入到style元素中就行了
-        var textNode = document.createTextNode(cssText);
-        style.appendChild(textNode);
-    }
-    head.appendChild(style); //把创建的style元素插入到head中
+      var myReg = /^[.#]?\w+[^{]+\{[^}]*\}/;
+      if (css_code && myReg.test(css_code)) {
+          document.styleSheets[0].insertRule(css_code)
+      }
   }
 
   function transformationRgb(color_value, aipha) {
-	if(color_value == undefined && aipha == undefined){
-       	return 'rgba(255,255,255,1)'
-     }
-    var a
-    if(aipha===undifind){
-      a=1
-    }else{
-      a= aipha / 100 ? aipha / 100 : 1
-    }
+      if (color_value == undefined && aipha == undefined) {
+          return 'rgba(255,255,255,1)'
+      }
+      var a
+      if (aipha === undifind) {
+          a = 1
+      } else {
+          a = aipha / 100 ? aipha / 100 : 1
+      }
 
-    if(!color_value){
-      return "rgba(255,255,255," + a + ")";
-    }
-    var reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
+      if (!color_value) {
+          return "rgba(255,255,255," + a + ")";
+      }
+      var reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
 
-    if (!color_value) {
-        return "rgba(255,255,255,"+a+")"
-    }
-    var color = color_value.toLowerCase();
-    if (reg.test(color)) {
-        if (color.length === 4) {
-            var colorNew = "#";
-            for (let i = 1; i < 4; i += 1) {
-                colorNew += color.slice(i, i + 1).concat(color.slice(i, i + 1));
-            }
-            color = colorNew;
-        }
-        var colorChange = [];
-        for (let i = 1; i < 7; i += 2) {
-            colorChange.push(parseInt("0x" + color.slice(i, i + 2)));
-        }
-        return "rgba(" + colorChange.join(",") + "," + a + ")";
-    } else {
-        return color;
-    }
-}
+      if (!color_value) {
+          return "rgba(255,255,255," + a + ")"
+      }
+      var color = color_value.toLowerCase();
+      if (reg.test(color)) {
+          if (color.length === 4) {
+              var colorNew = "#";
+              for (let i = 1; i < 4; i += 1) {
+                  colorNew += color.slice(i, i + 1).concat(color.slice(i, i + 1));
+              }
+              color = colorNew;
+          }
+          var colorChange = [];
+          for (let i = 1; i < 7; i += 2) {
+              colorChange.push(parseInt("0x" + color.slice(i, i + 2)));
+          }
+          return "rgba(" + colorChange.join(",") + "," + a + ")";
+      } else {
+          return color;
+      }
+  }
 
-
+  function isMobile(){var c=navigator.userAgent;var b=["Android","iPhone","SymbianOS","Windows Phone","iPod","iPad","ios"];for(var a=0;a<b.length;a++){if(c.indexOf(b[a])>=0){return true}}return false};
 
   documentReady(setLanguageSelector);
   function documentReady(fu) {
-    if (document.readyState === 'complete' || document.readyState === 'interactive') {
-      setTimeout(documentReady(setLanguageSelector), 1);
-    } else {
-      document.addEventListener('DOMContentLoaded', fu);
-    }
+      if (document.readyState === 'complete' || document.readyState === 'interactive') {
+          setTimeout(documentReady(setLanguageSelector), 1);
+      } else {
+          document.addEventListener('DOMContentLoaded', fu);
+      }
   }
 </script><style>
   .etranslate-LanguageList-link {
@@ -1258,7 +1156,7 @@ function compareDate(d,b){var a=false;if(!d){return true}var c=d.split("-");if(c
   }
 
   .etranslate-language-list-link {
-  padding: 0px;
+  list-style: none;
   overflow: auto;
   background: white;
   user-select: none;
@@ -1296,12 +1194,12 @@ function compareDate(d,b){var a=false;if(!d){return true}var c=d.split("-");if(c
     }
 
 .etranslate-language-float-link>ul{
-        margin: 0px !important;
+  margin: 0px;
         display: flex;
         align-items: center;
         justify-content: space-around;
         padding-right: 1rem;
-        padding: 5px 8px 5px 4px !important;
+        padding: 5px 8px 5px 4px;
         -webkit-transition: max-height 0.3s, visibility 0.2s, opacity 0.2s;
         -moz-transition: max-height 0.3s, visibility 0.2s, opacity 0.2s;
         -ms-transition: max-height 0.3s, visibility 0.2s, opacity 0.2s;
@@ -1318,6 +1216,7 @@ function compareDate(d,b){var a=false;if(!d){return true}var c=d.split("-");if(c
   			white-space:normal;
         }
   .etranslate-link-content:hover {
+            /* color: rgba(27, 160, 227, 1); */
             opacity: 0.7
         }
 
@@ -1360,7 +1259,8 @@ function compareDate(d,b){var a=false;if(!d){return true}var c=d.split("-");if(c
 
   .circle_flag {
   	border-radius: 50%;
-  	box-sizing: content-box !important;
+  	box-sizing: content-box;
+  	border: solid 1px #e6e3e3;
     width: 1em;
 	}
 
@@ -1370,10 +1270,6 @@ function compareDate(d,b){var a=false;if(!d){return true}var c=d.split("-");if(c
   	height: 28px;
   	margin-right: 3px;
   }
-.etranslate-language-list-link-li{
-    margin: 0 !important;
-    padding: 0 !important;
-}
 
 </style>
 <div id='localiser-translate-etranslate-link' class='etranslate-LanguageList-link etranslate-language-float-link' style='display:none'>
@@ -1395,7 +1291,7 @@ function compareDate(d,b){var a=false;if(!d){return true}var c=d.split("-");if(c
 
 <script>
 
-  var flag_min_link_width = {
+var flag_min_link_width = {
     rectangle_flag: 60,
     square_flag: 45,
     circle_flag: 45,
@@ -1425,29 +1321,56 @@ function compareDate(d,b){var a=false;if(!d){return true}var c=d.split("-");if(c
       ];
   }
 
-function setLinkSelectorUlStyle(f,g,b){var a=b.flags_type;var d=b.labels_type;var e=b.selector_width;var c=g&&g[0]?g.length:0;var h=(flag_min_link_width[a]+language_min_link_width[d]+2)*c+Number(e)+"px";return h};
+  function setLinkSelectorUlStyle(f,d,e,c){var h;var a;var g;if(c){h=e.mobile_flags_type;a=e.mobile_labels_type;g=e.mobile_selector_width}else{h=e.flags_type;a=e.labels_type;g=e.selector_width}var i=d&&d[0]?d.length:0;var b=(flag_min_link_width[h]+language_min_link_width[a]+2)*i+Number(g)+"px";return b};
 
-function setLinkSelectorStyle(f,h,j){var p=h&&h[0]?h.length:0;var q=j.position_lr;var n=j.position_tb;var b=j.labels_type;var m=j.flags_type;var k=n==="fixed_top"||n==="fixed_bottom"?"fixed":"absolute";var g=q==="right"?"right":"left";var o=n==="bottom"||n==="fixed_bottom"?"bottom":"top";var l=j.selector_width;var a;var c=(flag_min_link_width[m]+language_min_link_width[b]+2)*p+Number(l);if(g==="right"){a=Number(j.horizontal)+c-1}else{var a=Number(j.horizontal)-1}var e=Number(j.vertical)-1;if(o==="bottom"){e=e+45}var l=j.selector_width;var i=j.font_color;var b=j.labels_type;var m=j.flags_type;var d="top: auto;bottom: auto;left: auto;right: auto;"+g+":"+a+"px;"+o+":"+e+"px;color:"+i+";position:"+k+";";return d};
+  function setLinkSelectorStyle(g,p,l,q){var c=p&&p[0]?p.length:0;var m;var n;var r;var i;var f;var o;var h;if(q){m=l.mobile_position_lr;n=l.mobile_position_tb;r=l.mobile_labels_type;i=l.mobile_flags_type;f=l.mobile_selector_width;h=l.mobile_font_color}else{m=l.position_lr;n=l.position_tb;r=l.labels_type;i=l.flags_type;f=l.selector_width;h=l.font_color}var d=n==="fixed_top"||n==="fixed_bottom"?"fixed":"absolute";var a=m==="right"?"right":"left";var k=n==="bottom"||n==="fixed_bottom"?"bottom":"top";var j=(flag_min_link_width[i]+language_min_link_width[r]+2)*c+Number(f);if(a==="right"){if(q){o=Number(l.mobile_horizontal)+j-1}else{o=Number(l.horizontal)+j-1}}else{if(q){o=Number(l.mobile_horizontal)-1}else{o=Number(l.horizontal)-1}}var b=Number(l.vertical)-1;if(k==="bottom"){b=b+45}var e="top: auto;bottom: auto;left: auto;right: auto;"+a+":"+o+"px;"+k+":"+b+"px;color:"+h+";position:"+d+";";return e};
 
-function getLinkCurrentLocale(c,b){var a=window.location.pathname.split("/").filter(function(d){return d});if(a&&a.length>0&&c.find(function(d){return d.iso_code.toLowerCase()===a[0].toLowerCase()})){return a[0]}else{return b}};
+  function getLinkCurrentLocale(c,b){var a=window.location.pathname.split("/").filter(function(d){return d});if(a&&a.length>0&&c.find(function(d){return d.iso_code.toLowerCase()===a[0].toLowerCase()})){return a[0]}else{return b}};
 
-function createLanguageFloatLinkSelector(shopDomain, languageList, defaultLocale, currentLocale, etranslateDom, metaFiles){
+  function findLanguageFlags(c,b){var a;if(c&&c[b]){a=langCodeToCountryArray[c[b]]?langCodeToCountryArray[c[b]]:langCodeToCountryArray[b]}else{a=langCodeToCountryArray[b]}return a};
 
-     var position_lr=metaFiles.position_lr
-     var position_tb=metaFiles.position_tb
+  function createLanguageFloatLinkSelector(shopDomain, languageList, defaultLocale, currentLocale, etranslateDom, metaFiles, is_mobile){
+    var position_lr
+    var position_tb
+    var selector_width
+    var horizontal
+    var vertical
+    var selector_width
+    var font_color
+    var labels_type
+    var flags_type
+    var language_flags
+    var border_width
+    var bg_rgba
+    if (is_mobile) {
+      position_lr = metaFiles.mobile_position_lr
+      position_tb = metaFiles.mobile_position_tb
+      selector_width = metaFiles.mobile_selector_width
+      horizontal = metaFiles.mobile_horizontal
+      vertical = metaFiles.mobile_vertical
+      selector_width = metaFiles.mobile_selector_width
+      font_color = metaFiles.mobile_font_color
+      labels_type = metaFiles.mobile_labels_type
+      flags_type = metaFiles.mobile_flags_type
+      border_width = metaFiles.mobile_border_width
+      bg_rgba=transformationRgb(metaFiles.mobile_background_color,metaFiles.mobile_background_opacity)
+    } else {
+      position_lr = metaFiles.position_lr
+      position_tb = metaFiles.position_tb
+      selector_width = metaFiles.selector_width
+      horizontal = metaFiles.horizontal
+      vertical = metaFiles.vertical
+      selector_width = metaFiles.selector_width
+      font_color = metaFiles.font_color
+      labels_type = metaFiles.labels_type
+      flags_type = metaFiles.flags_type
+      border_width = metaFiles.border_width
+      bg_rgba=transformationRgb(metaFiles.background_color,metaFiles.background_opacity)
+    }
+     var language_flags = metaFiles.language_flags
      var position_type=position_tb==='fixed_top'||position_tb==='fixed_bottom'?'fixed':'absolute'
      var right_or_left=position_lr==='right'?'right':'left'
      var top_or_button=position_tb==='top'||position_tb==='fixed_bottom'?'bottom':'top'
-     var selector_width=metaFiles.selector_width
-     var horizontal=metaFiles.horizontal
-     var vertical=metaFiles.vertical
-     var selector_width=metaFiles.selector_width
-     var font_color=metaFiles.font_color
-     var labels_type=metaFiles.labels_type
-     var flags_type=metaFiles.flags_type
-     var language_flags=metaFiles.language_flags
-     var border_width=metaFiles.border_width
-     var bg_rgba=transformationRgb(metaFiles.background_color,metaFiles.background_opacity)
 
      var dropdownDom=etranslateDom.getElementsByClassName('etranslate-language-list-link')[0]
 
@@ -1487,12 +1410,11 @@ function createLanguageFloatLinkSelector(shopDomain, languageList, defaultLocale
           		}
       		}
           }
-     var selector_ul_style=setLinkSelectorUlStyle(etranslateDom, languageList, metaFiles)
+     var selector_ul_style=setLinkSelectorUlStyle(etranslateDom, languageList, metaFiles, is_mobile)
      dropdownDom.setAttribute('style','width:'+selector_ul_style+';border-width:'+border_width+'px; background-color:'+bg_rgba+';')
-     var selector_style=setLinkSelectorStyle(dropdownDom, languageList, metaFiles)
+     var selector_style=setLinkSelectorStyle(dropdownDom, languageList, metaFiles, is_mobile)
      var horizontal=Number(horizontal)+Number(dropdownDom.offsetWidth)
      etranslateDom.setAttribute('style',selector_style)
-
 
 
     function languageLinkChange(lang,defaultLocale) {
@@ -1511,7 +1433,7 @@ function createLanguageFloatLinkSelector(shopDomain, languageList, defaultLocale
               }
 
               //切换为默认语言
-              if(currentLocale.toLowerCase()!==lan_code.toLowerCase() && url_lan_code.toLowerCase()!==lan_code.toLowerCase() && defaultLocale.toLowerCase()===lan_code.toLowerCase()){
+              if(currentLocale!==lan_code && url_lan_code.toLowerCase()!==lan_code && defaultLocale===lan_code){
                 var new_pathname
                 if (!url_lan_code) {
                     new_pathname = '/' + lan_code
@@ -1522,7 +1444,7 @@ function createLanguageFloatLinkSelector(shopDomain, languageList, defaultLocale
               }
 
               //切换为非默认
-              if(currentLocale.toLowerCase()!==lan_code.toLowerCase() && url_lan_code.toLowerCase()!==lan_code.toLowerCase() && defaultLocale.toLowerCase()!==lan_code.toLowerCase()){
+              if(currentLocale!==lan_code && url_lan_code.toLowerCase()!==lan_code && defaultLocale!==lan_code){
                 //插入url_lan_code
             	var new_pathname
                 if (lan_code === url_lan_code.toLowerCase()) {
@@ -1560,14 +1482,32 @@ function createLanguageFloatLinkSelector(shopDomain, languageList, defaultLocale
     var currentLocale = getLinkCurrentLocale(languageList, defaultLocale);
     var metaFiles = {{shop.metafields.etranslate.selector_config | json}}
     var etranslateDom = document.getElementById('localiser-translate-etranslate-link')
+    var is_mobile = isMobile();
     if( Number(metaFiles.status) === 1){
-      	if(metaFiles.style_of_the_selector === 'links' && metaFiles.choose_language_selector === 'floating_selector'){
-      		createLanguageFloatLinkSelector(shopDomain, languageList, defaultLocale, currentLocale, etranslateDom, metaFiles)
-        }else{
-          	etranslateDom.remove()
+      if (is_mobile) {
+        if (metaFiles.mobile_style_of_the_selector === 'links' && metaFiles.mobile_choose_language_selector === 'floating_selector') {
+          applyPriviewCssCode(metaFiles.mobile_css_code)
+          createLanguageFloatLinkSelector(shopDomain, languageList, defaultLocale, currentLocale, etranslateDom, metaFiles, is_mobile)
+        } else {
+          etranslateDom.remove()
         }
+      } else {
+        if (metaFiles.style_of_the_selector === 'links' && metaFiles.choose_language_selector === 'floating_selector') {
+          applyPriviewCssCode(metaFiles.css_code)
+          createLanguageFloatLinkSelector(shopDomain, languageList, defaultLocale, currentLocale, etranslateDom, metaFiles, is_mobile)
+        } else {
+          etranslateDom.remove()
+        }
+      }
     }else{
       	etranslateDom.remove()
+    }
+  }
+
+  function applyPriviewCssCode(css_code) {
+    var myReg = /^[.#]?\w+[^{]+\{[^}]*\}/;
+    if (myReg.test(css_code)) {
+       document.styleSheets[0].insertRule(css_code)
     }
   }
 
@@ -1605,6 +1545,7 @@ function createLanguageFloatLinkSelector(shopDomain, languageList, defaultLocale
     }
 }
 
+function isMobile(){var c=navigator.userAgent;var b=["Android","iPhone","SymbianOS","Windows Phone","iPod","iPad","ios"];for(var a=0;a<b.length;a++){if(c.indexOf(b[a])>=0){return true}}return false};
 
   documentReady(setLanguageLinkSelector);
   function documentReady(fu) {
