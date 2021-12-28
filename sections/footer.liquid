@@ -312,6 +312,7 @@
   </div>
 </footer>
 
+<div id="new_header" ></div>
 
 <script>
 
@@ -322,6 +323,7 @@
       dataType: 'text',
       success: data => {
         console.log(data);
+        $("#new_header").append(data);
       }
     })
   })
