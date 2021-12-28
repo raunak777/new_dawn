@@ -321,8 +321,8 @@
       type: "get",
       url: "/?sections=header",
       success: data => {
-        console.log(data);
-        $("#new_header").append(data);
+        console.log(data.header);
+        $("#new_header").append(data.header);
       }
     })
   })
