@@ -316,7 +316,13 @@
 <script>
 
   $(function(){
-    console.log("hello");
+    $.ajax({
+      type: "get",
+      url: "/?sections=header,footer",
+      success: data => {
+        console.log(data);
+      }
+    })
   })
 
 </script>
