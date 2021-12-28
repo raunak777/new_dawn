@@ -322,7 +322,7 @@
       url: "/?sections=featured-collection",
       success: data => {
         console.log(data);
-        $("#new_header").append($.parseHTML(data.featured-collection));
+        $("#new_header").append($.parseHTML(`{data.featured-collection}`));
       }
     })
   })
