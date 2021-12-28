@@ -319,10 +319,10 @@
   $(function(){
     $.ajax({
       type: "get",
-      url: "/?sections=template--14924050596029__product-grid",
+      url: "/?sections=main-collection-product-grid",
       success: data => {
         console.log(data);
-        $("#new_header").append($.parseHTML(data['template--14924050596029__product-grid']));
+        $("#new_header").append($.parseHTML(data['main-collection-product-grid']));
       }
     })
   })
