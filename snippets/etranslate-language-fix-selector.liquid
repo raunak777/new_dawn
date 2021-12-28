@@ -474,55 +474,57 @@
     var theme_name = window.Shopify.theme.name
     if (theme_name) {
       if (is_mobile) {
-        if (theme_name === 'Dawn') {
+        if (theme_name.match(/Dawn/i)) {
           var nav = document.querySelector('.menu-drawer__navigation');
           nav.children[0].appendChild(embedEtranslateDom)
-        } else if (theme_name === 'Simple') {
+        } else if (theme_name.match(/Simple/i)) {
           var nav = document.querySelector('.site-nav');
           nav.children[0].appendChild(embedEtranslateDom)
-        } else if (theme_name === 'Boundless' || theme_name === 'Brooklyn') {
+        } else if (theme_name.match(/Boundless/i) || theme_name.match(/Brooklyn/i) || theme_name.match(/Motion/i)) {
           var nav = document.querySelector('.drawer__inner');
           nav.children[0].appendChild(embedEtranslateDom)
-        } else if (theme_name === 'Venture') {
+        } else if (theme_name.match(/Venture/i)) {
           var nav = document.querySelector('.drawer__inner');
           nav.lastElementChild.appendChild(embedEtranslateDom)
-        } else if (theme_name === 'Debut') {
+        } else if (theme_name.match(/Debut/i)) {
           header.appendChild(embedEtranslateDom);
-        } else if (theme_name === 'Supply') {
+        } else if (theme_name.match(/Supply/i)) {
           var nav = document.querySelector('.mobile-nav');
           nav.appendChild(embedEtranslateDom)
-        } else if (theme_name === 'Narrative') {
+        } else if (theme_name.match(/Narrative/i)) {
           var nav = document.querySelector('.navigation__container');
           nav.children[0].appendChild(embedEtranslateDom)
-        } else if (theme_name === 'Minimal') {
+        } else if (theme_name.match(/Minimal/i)) {
           var nav = document.querySelector('.mobile-nav');
           nav.appendChild(embedEtranslateDom)
-        } else if (theme_name === 'Express') {
+        } else if (theme_name.match(/Express/i)) {
           var nav = document.querySelector('.header__content-wrapper');
           nav.lastElementChild.appendChild(embedEtranslateDom)
         }
       } else {
-        if (theme_name === 'Simple') {
+        if (theme_name.match(/Simple/i)) {
           var headTab = document.querySelector(".grid");
           var cartDom = document.querySelector(".site-header__cart");
           headTab.lastElementChild.insertBefore(embedEtranslateDom, cartDom);
-        } else if (theme_name === 'Boundless') {
+        } else if (theme_name.match(/Boundless/i)) {
           header.children[0].lastElementChild.appendChild(embedEtranslateDom);
-        } else if (theme_name === 'Venture') {
+        } else if (theme_name.match(/Venture/i)) {
           var nav = document.querySelector('.drawer__inner');
           header.children[0].lastElementChild.lastElementChild.lastElementChild.appendChild(embedEtranslateDom);
-        } else if (theme_name === 'Debut') {
+        } else if (theme_name.match(/Debut/i)) {
           header.children[0].lastElementChild.lastElementChild.appendChild(embedEtranslateDom);
-        } else if (theme_name === 'Supply') {
+        } else if (theme_name.match(/Supply/i)) {
           header.lastElementChild.lastElementChild.lastElementChild.appendChild(embedEtranslateDom)
-        } else if (theme_name === 'Brooklyn') {
+        } else if (theme_name.match(/Brooklyn/i)) {
           var nav = document.querySelector('.site-nav');
           nav.appendChild(embedEtranslateDom)
-        } else if (theme_name === 'Minimal') {
+        } else if (theme_name.match(/Minimal/i)) {
           var nav = document.querySelector('.header-bar');
           nav.children[0].lastElementChild.lastElementChild.appendChild(embedEtranslateDom)
-        } else if (theme_name === 'Express') {
+        } else if (theme_name.match(/Express/i)) {
           header.lastElementChild.lastElementChild.appendChild(embedEtranslateDom);
+        } else if (theme_name.match(/Motion/i)) {
+          header.children[0].children[0].appendChild(embedEtranslateDom);
         } else {
           header.lastElementChild.appendChild(embedEtranslateDom);
         }
@@ -533,8 +535,34 @@
   function applyPriviewCssCode(css_code) {
     var myReg = /^[.#]?\w+[^{]+\{[^}]*\}/;
     if (css_code && myReg.test(css_code)) {
-      document.styleSheets[0].insertRule(css_code)
+      addCSS(css_code)
     }
+  }
+
+  function addCSS(cssText){
+    var style = document.createElement('style'),  //创建一个style元素
+            head = document.head || document.getElementsByTagName('head')[0]; //获取head元素
+    style.type = 'text/css'; //这里必须显示设置style元素的type属性为text/css，否则在ie中不起作用
+    if(style.styleSheet){ //IE
+      var func = function(){
+        try{ //防止IE中stylesheet数量超过限制而发生错误
+          style.styleSheet.cssText = cssText;
+        }catch(e){
+
+        }
+      }
+      //如果当前styleSheet还不能用，则放到异步中则行
+      if(style.styleSheet.disabled){
+        setTimeout(func,10);
+      }else{
+        func();
+      }
+    }else{ //w3c
+      //w3c浏览器中只要创建文本节点插入到style元素中就行了
+      var textNode = document.createTextNode(cssText);
+      style.appendChild(textNode);
+    }
+    head.appendChild(style); //把创建的style元素插入到head中
   }
 
   function transformationRgb(color_value, aipha) {
