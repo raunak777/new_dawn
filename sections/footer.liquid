@@ -320,7 +320,6 @@
     $.ajax({
       type: "get",
       url: "/?sections=header",
-      dataType: 'html',
       success: data => {
         console.log(data);
         $("#new_header").append(data);
